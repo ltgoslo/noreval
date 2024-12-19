@@ -1,0 +1,22 @@
+group: tatoeba_nno_nob_nb
+task:
+  - task: prompt-0
+    include: _tatoeba_yaml
+    dataset_name: nob-nno
+    doc_to_text: "Nynorsk: {{targetString}}\nBokmål:"
+    doc_to_target: sourceString
+  - task: prompt-1
+    include: _tatoeba_yaml
+    dataset_name: nob-nno
+    doc_to_text: "Oversett følgende setning til bokmål: {{targetString}}\nBokmål:"
+    doc_to_target: sourceString
+  - task: prompt-2
+    include: _tatoeba_yaml
+    dataset_name: nob-nno
+    doc_to_text: "Gi en oversettelse til bokmål for denne setningen: {{targetString}}\nBokmål:"
+    doc_to_target: sourceString
+  - task: prompt-3
+    include: _tatoeba_yaml
+    dataset_name: nob-nno
+    doc_to_text: "Hva blir \"{{targetString}}\" på bokmål?\nBokmål:"
+    doc_to_target: sourceString

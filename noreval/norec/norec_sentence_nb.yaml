@@ -1,0 +1,27 @@
+group: norec_sentence_nb
+task:
+  - task: prompt-0
+    dataset_path: ltg/norec_sentence
+    include: _norec_yaml
+    doc_to_text: "Tekst: {{review}}\nSentiment:"
+    doc_to_choice: ["negativ", "positiv"]
+  - task: prompt-1
+    dataset_path: ltg/norec_sentence
+    include: _norec_yaml
+    doc_to_text: "{{review}}\nEr denne setningen \"positiv\" eller \"negativ\"?"
+    doc_to_choice: ["negativ", "positiv"]
+  - task: prompt-2
+    dataset_path: ltg/norec_sentence
+    include: _norec_yaml
+    doc_to_text: "{{review}}\nHva slags sentiment uttrykker anmelderen?"
+    doc_to_choice: ["negativ", "positiv"]
+  - task: prompt-3
+    dataset_path: ltg/norec_sentence
+    include: _norec_yaml
+    doc_to_text: "{{review}}\nEr anmeldelsen \"positiv\" eller \"negativ\"?"
+    doc_to_choice: ["negativ", "positiv"]
+  - task: prompt-4
+    dataset_path: ltg/norec_sentence
+    include: _norec_yaml
+    doc_to_text: "{{review}}\nEr denne setningen positiv eller negativ?"
+    doc_to_choice: ["negativ", "positiv"]

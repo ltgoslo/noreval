@@ -1,0 +1,6 @@
+group: norec
+task: norec_document
+dataset_path: ltg/norec_document
+include: _norec_yaml
+doc_to_text: "Tekst: {{review}}\nSentiment:"
+doc_to_choice: ["negativ", "positiv"]

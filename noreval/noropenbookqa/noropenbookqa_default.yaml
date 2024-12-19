@@ -1,0 +1,5 @@
+task: noropenbookqa
+dataset_name: nb
+include: _noropenbookqa_yaml
+doc_to_text: question_stem
+doc_to_choice: "{{choices.text}}"

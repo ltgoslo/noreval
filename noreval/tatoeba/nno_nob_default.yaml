@@ -1,0 +1,6 @@
+group: tatoeba
+task: tatoeba_nob_nno
+include: _tatoeba_yaml
+dataset_name: nob-nno
+doc_to_text: "Nynorsk: {{targetString}}\nBokmål:"
+doc_to_target: sourceString

@@ -1,0 +1,26 @@
+group: tatoeba_eng_nno_nb
+task:
+  - task: prompt-0
+    include: _tatoeba_yaml
+    dataset_name: eng-nno
+    training_split: validation
+    doc_to_text: "Engelsk: {{sourceString}}\nNynorsk:"
+    doc_to_target: targetString
+  - task: prompt-1
+    include: _tatoeba_yaml
+    dataset_name: eng-nno
+    training_split: validation
+    doc_to_text: "Oversett følgende setning til nynorsk: {{sourceString}}\nNynorsk:"
+    doc_to_target: targetString
+  - task: prompt-2
+    include: _tatoeba_yaml
+    dataset_name: eng-nno
+    training_split: validation
+    doc_to_text: "Gi en nynorsk oversettelse av denne setningen: {{sourceString}}\nNynorsk:"
+    doc_to_target: targetString
+  - task: prompt-3
+    include: _tatoeba_yaml
+    dataset_name: eng-nno
+    training_split: validation
+    doc_to_text: "Hva blir \"{{sourceString}}\" på nynorsk?\nNynorsk:"
+    doc_to_target: targetString

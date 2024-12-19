@@ -1,0 +1,23 @@
+group: norbelebele_nb
+task:
+  - task: prompt-0
+    include: _norbelebele_yaml
+    doc_to_text: "Tekst: {{flores_passage}}\nSpørsmål: {{question}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nSvar:"
+    doc_to_choice: ["A", "B", "C", "D"]
+  - task: prompt-1
+    include: _norbelebele_yaml
+    doc_to_text: "Bakgrunn: {{flores_passage}}\nSpørsmål:{{question}}\nSvaralternativer:\n- {{mc_answer1}}\n- {{mc_answer2}}\n- {{mc_answer3}}\n- {{mc_answer4}}\nRiktig svar:"
+    doc_to_choice: "{{[mc_answer1, mc_answer2, mc_answer3, mc_answer4]}}"
+  - task: prompt-2
+    include: _norbelebele_yaml
+    doc_to_text: "{{question}}\nHvilket av følgende mulige svar er det riktige?\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nSvar:"
+    doc_to_choice: ["A", "B", "C", "D"]
+  - task: prompt-3
+    include: _norbelebele_yaml
+    doc_to_text: "Svar på følgende spørsmål: {{question}}\nSvaret skal baseres på følgende tekst:\n{{flores_passage}}\nVelg et svar fra denne listen:\n– {{mc_answer1}}\n– {{mc_answer2}},\n– {{mc_answer3}}\n– {{mc_answer4}}"
+    doc_to_choice: "{{[mc_answer1, mc_answer2, mc_answer3, mc_answer4]}}"
+    target_delimiter: "\n"
+  - task: prompt-4
+    include: _norbelebele_yaml
+    doc_to_text: "{{flores_passage}}\n\n{{question}}\n\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\n\nEr det riktige svaret A, B, C, eller D?"
+    doc_to_choice: ["A", "B", "C", "D"]

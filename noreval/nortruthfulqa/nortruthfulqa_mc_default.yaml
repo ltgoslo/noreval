@@ -1,0 +1,4 @@
+task: nortruthfulqa_mc
+dataset_name: nb
+include: _nortruthfulqa_mc_yaml
+doc_to_text: !function utils.p0

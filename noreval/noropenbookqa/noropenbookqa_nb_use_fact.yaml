@@ -1,0 +1,32 @@
+group: noropenbookqa_nb_use_fact
+task:
+  - task: prompt-0
+    dataset_name: nb
+    include: _noropenbookqa_yaml
+    doc_to_text: "{{fact}}\n{{question_stem}}"
+    doc_to_choice: "{{choices.text}}"
+    process_docs: !function utils.filter_dataset
+  - task: prompt-1
+    dataset_name: nb
+    include: _noropenbookqa_yaml
+    doc_to_text: "Faktatekst: {{fact}}\nSpørsmål til teksten: {{question_stem}}\n\nSvaralternativer:\n- {{choices.text[0]}}\n- {{choices.text[1]}}\n- {{choices.text[2]}}\n- {{choices.text[3]}}\n\nHva er riktig svar?"
+    doc_to_choice: "{{choices.text}}"
+    process_docs: !function utils.filter_dataset
+  - task: prompt-2
+    dataset_name: nb
+    include: _noropenbookqa_yaml
+    doc_to_text: "{{fact}}\n{{question_stem}}\nA: {{choices.text[0]}}\nB: {{choices.text[1]}}\nC: {{choices.text[2]}}\nD: {{choices.text[3]}}\n\nEr det riktige svaret A, B, C, eller D?\n\nSvar:"
+    doc_to_choice: "{{choices.label}}"
+    process_docs: !function utils.filter_dataset
+  - task: prompt-3
+    dataset_name: nb
+    include: _noropenbookqa_yaml
+    doc_to_text: "Bakgrunn: {{fact}}\n\nSpørsmål: {{question_stem}}\nA: {{choices.text[0]}}\nB: {{choices.text[1]}}\nC: {{choices.text[2]}}\nD: {{choices.text[3]}}\n\nSvar:"
+    doc_to_choice: "{{choices.label}}"
+    process_docs: !function utils.filter_dataset
+  - task: prompt-4
+    dataset_name: nb
+    include: _noropenbookqa_yaml
+    doc_to_text: "Ta utgangspunkt i følgende fakta når du svarer på spørsmålet: {{fact}}\n\n{{question_stem}}\nVelg riktig svar blant disse alternativene:\n– {{choices.text[0]}}\n– {{choices.text[1]}}\n– {{choices.text[2]}}\n– {{choices.text[3]}}\n\nSvar:"
+    doc_to_choice: "{{choices.text}}"
+    process_docs: !function utils.filter_dataset

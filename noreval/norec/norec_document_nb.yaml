@@ -1,0 +1,27 @@
+group: norec_document_nb
+task:
+  - task: prompt-0
+    dataset_path: ltg/norec_document
+    include: _norec_yaml
+    doc_to_text: "Tekst: {{review}}\nSentiment:"
+    doc_to_choice: ["negativ", "positiv"]
+  - task: prompt-1
+    dataset_path: ltg/norec_document
+    include: _norec_yaml
+    doc_to_text: "Tekst: {{review}}\nEr anmeldelsen \"positiv\" eller \"negativ\"?"
+    doc_to_choice: ["negativ", "positiv"]
+  - task: prompt-2
+    dataset_path: ltg/norec_document
+    include: _norec_yaml
+    doc_to_text: "Er polariteten til følgende anmeldelse positiv eller negativ?\nAnmeldelse: {{review}}\nAnmeldelsen er"
+    doc_to_choice: ["negativ", "positiv"]
+  - task: prompt-3
+    dataset_path: ltg/norec_document
+    include: _norec_yaml
+    doc_to_text: "Anmeldelse: {{review}}\nEr anmelderen positiv eller negativ?"
+    doc_to_choice: ["negativ", "positiv"]
+  - task: prompt-4
+    dataset_path: ltg/norec_document
+    include: _norec_yaml
+    doc_to_text: "Anmeldelse: {{review}}\nVil du oppsummere anmeldelsen som \"bra\" eller \"dårlig\"?"
+    doc_to_choice: ["dårlig", "bra"]

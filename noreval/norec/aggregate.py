@@ -1,0 +1,10 @@
+import sklearn
+import numpy as np
+
+
+def multi_f1(items):
+    preds, golds = zip(*items)
+    preds = np.array(preds)
+    golds = np.array(golds)
+    fscore = sklearn.metrics.f1_score(golds, preds, average="macro")
+    return fscore
