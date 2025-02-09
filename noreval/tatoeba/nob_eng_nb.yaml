@@ -1,0 +1,26 @@
+group: tatoeba_nob_eng_nb
+task:
+  - task: prompt-0
+    include: _tatoeba_yaml
+    dataset_name: eng-nob
+    training_split: validation
+    doc_to_text: "Bokmål: {{targetString}}\nEngelsk:"
+    doc_to_target: sourceString
+  - task: prompt-1
+    include: _tatoeba_yaml
+    dataset_name: eng-nob
+    training_split: validation
+    doc_to_text: "Oversett følgende setning til engelsk: {{targetString}}\nEngelsk:"
+    doc_to_target: sourceString
+  - task: prompt-2
+    include: _tatoeba_yaml
+    dataset_name: eng-nob
+    training_split: validation
+    doc_to_text: "Gi en engelsk oversettelse av denne setningen: {{targetString}}\nEngelsk:"
+    doc_to_target: sourceString
+  - task: prompt-3
+    include: _tatoeba_yaml
+    dataset_name: eng-nob
+    training_split: validation
+    doc_to_text: "Hva blir \"{{targetString}}\" på engelsk?\nEngelsk:"
+    doc_to_target: sourceString

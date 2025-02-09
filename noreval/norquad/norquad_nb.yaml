@@ -1,0 +1,12 @@
+group: norquad_nb
+task:
+  - task: prompt-0
+    class: !function task.P0NB
+  - task: prompt-1
+    class: !function task.P1NB
+  - task: prompt-2
+    class: !function task.P2NB
+  - task: prompt-3
+    class: !function task.P3NB
+  - task: prompt-4
+    class: !function task.P4NB

@@ -1,0 +1,5 @@
+task: nrk
+dataset_name: nb
+include: _nrk_yaml
+doc_to_text: "Spørsmål: {{question}}\n\nSvar:"
+doc_to_choice: "{{choices.text}}"

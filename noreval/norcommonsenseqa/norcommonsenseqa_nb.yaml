@@ -1,0 +1,27 @@
+group: norcommonsenseqa_nb
+task:
+  - task: prompt-0
+    dataset_name: nb
+    include: _norcommonsenseqa_yaml
+    doc_to_text: "Spørsmål: {{question}}\n\nSvar:"
+    doc_to_choice: "{{choices.text}}"
+  - task: prompt-1
+    dataset_name: nb
+    include: _norcommonsenseqa_yaml
+    doc_to_text: "{{question}}\nHvilket av følgende mulige svar er det riktige?\nA: {{choices.text[0]}}\nB: {{choices.text[1]}}\nC: {{choices.text[2]}}\nD: {{choices.text[3]}}\nE: {{choices.text[4]}}\n\nSvar:"
+    doc_to_choice: "{{choices.label}}"
+  - task: prompt-2
+    dataset_name: nb
+    include: _norcommonsenseqa_yaml
+    doc_to_text: "Gitt alternativene under, hva er svaret på følgende spørsmål: {{question}}\n\nAlternativer:\n- {{choices.text[0]}}\n- {{choices.text[1]}}\n- {{choices.text[2]}}\n- {{choices.text[3]}}\n- {{choices.text[4]}}\n\nSvar:"
+    doc_to_choice: "{{choices.text}}"
+  - task: prompt-3
+    dataset_name: nb
+    include: _norcommonsenseqa_yaml
+    doc_to_text: "{{question}}\nVelg riktig svar blant disse alternativene:\n– {{choices.text[0]}}\n– {{choices.text[1]}}\n– {{choices.text[2]}}\n– {{choices.text[3]}}\n– {{choices.text[4]}}\n\nSvar:"
+    doc_to_choice: "{{choices.text}}"
+  - task: prompt-4
+    dataset_name: nb
+    include: _norcommonsenseqa_yaml
+    doc_to_text: "{{question}}\nA: {{choices.text[0]}}\nB: {{choices.text[1]}}\nC: {{choices.text[2]}}\nD: {{choices.text[3]}}\nE: {{choices.text[4]}}\n\nEr det riktige svaret A, B, C, D, eller E?\n\nSvar:"
+    doc_to_choice: "{{choices.label}}"

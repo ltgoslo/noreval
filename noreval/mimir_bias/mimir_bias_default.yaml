@@ -1,0 +1,19 @@
+task: mimir_bias
+dataset_path: mimir-project/mimir-bias
+training_split: null
+validation_split: null
+test_split: train
+output_type: multiple_choice
+doc_to_text: ""
+doc_to_target: 0
+num_fewshot: 0
+doc_to_choice: !function utils.doc_to_choice
+target_delimiter: ""
+process_results: !function utils.process_results
+metric_list:
+  - metric: likelihood_diff
+    aggregation: mean
+    higher_is_better: false
+  - metric: pct_stereotype
+    aggregation: mean
+    higher_is_better: false

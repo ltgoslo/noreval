@@ -1,0 +1,22 @@
+group: noridiom_nn
+task:
+  - task: prompt-0
+    dataset_name: nn
+    include: _noridiom_yaml
+    doc_to_text: "Fullfør dette uttrykket: {{idiom}}"
+  - task: prompt-1
+    dataset_name: nn
+    include: _noridiom_yaml
+    doc_to_text: "Skriv fortsetjinga av idiomet {{idiom}}"
+  - task: prompt-2
+    dataset_name: nn
+    include: _noridiom_yaml
+    doc_to_text: "Korleis fortset uttrykket \"{{idiom}}\"?"
+  - task: prompt-3
+    dataset_name: nn
+    include: _noridiom_yaml
+    doc_to_text: "Fullfør vendinga: {{idiom}}"
+  - task: prompt-4
+    dataset_name: nn
+    include: _noridiom_yaml
+    doc_to_text: "{{idiom}}"

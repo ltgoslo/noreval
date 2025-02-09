@@ -1,0 +1,27 @@
+group: nrk_nn
+task:
+  - task: prompt-0
+    dataset_name: nn
+    include: _nrk_yaml
+    doc_to_text: !function utils.p0
+    doc_to_choice: "{{choices.text}}"
+  - task: prompt-1
+    dataset_name: nn
+    include: _nrk_yaml
+    doc_to_text: !function utils.p1_nn
+    doc_to_choice: "{{choices.text}}"
+  - task: prompt-2
+    dataset_name: nn
+    include: _nrk_yaml
+    doc_to_text: !function utils.p2_nn
+    doc_to_choice: "{{choices.label}}"
+  - task: prompt-3
+    dataset_name: nn
+    include: _nrk_yaml
+    doc_to_text: !function utils.p3_nn
+    doc_to_choice: "{{choices.label}}"
+  - task: prompt-4
+    dataset_name: nn
+    include: _nrk_yaml
+    doc_to_text: !function utils.p4_nn
+    doc_to_choice: "{{choices.text}}"

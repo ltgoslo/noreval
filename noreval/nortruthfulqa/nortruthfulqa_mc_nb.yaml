@@ -1,0 +1,24 @@
+group: nortruthfulqa_mc_nb
+task:
+  - task: prompt-0
+    dataset_name: nb
+    include: _nortruthfulqa_mc_yaml
+    doc_to_text: !function utils.p0
+  - task: prompt-1
+    dataset_name: nb
+    include: _nortruthfulqa_mc_yaml
+    doc_to_text: !function utils.p1_nb
+  - task: prompt-2
+    dataset_name: nb
+    include: _nortruthfulqa_mc_yaml
+    doc_to_text: !function utils.p2_nb
+    target_delimiter: "\n"
+  - task: prompt-3
+    dataset_name: nb
+    include: _nortruthfulqa_mc_yaml
+    doc_to_text: !function utils.p3_nb
+    target_delimiter: "\n"
+  - task: prompt-4
+    dataset_name: nb
+    include: _nortruthfulqa_mc_yaml
+    doc_to_text: !function utils.p4_nb

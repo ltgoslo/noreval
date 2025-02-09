@@ -1,0 +1,7 @@
+group: tatoeba
+task: tatoeba_nno_eng
+include: _tatoeba_yaml
+dataset_name: eng-nno
+training_split: validation
+doc_to_text: "Nynorsk: {{targetString}}\nEngelsk:"
+doc_to_target: sourceString

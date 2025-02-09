@@ -1,0 +1,28 @@
+group: norsumm_nb
+task:
+  - task: prompt-0
+    dataset_name: nb
+    include: _norsumm_yaml
+    doc_to_text: "Skriv en oppsummering av følgende artikkel med kun noen få punkter: {{article}}\nOppsummering:"
+  - task: prompt-1
+    dataset_name: nb
+    include: _norsumm_yaml
+    doc_to_text: "Oppsummer følgende artikkel med noen få setninger: {{article}}\nOppsummering:"
+  - task: prompt-2
+    dataset_name: nb
+    include: _norsumm_yaml
+    doc_to_text: "{{article}}\nSkriv en kort og presis oppsummering av teksten over. Språket må være klart og lett å forstå. Sørg for å ikke introdusere feil. Oppsummeringen må dekke følgende spørsmål: hvem, hva, hvor, når, og hvorfor er denne saken viktig å vite om. Oppsummeringen må være engasjerende og fremheve nøkkelinformasjon fra artikkelen. Oppsummeringen skal inneholde maksimalt 700 tegn, inkludert mellomrom."
+    target_delimiter: "\n"
+  - task: prompt-3
+    dataset_name: nb
+    include: _norsumm_yaml
+    doc_to_text: "Gi et kortfattet sammendrag av følgende tekst: {{article}}"
+    target_delimiter: "\n"
+  - task: prompt-4
+    dataset_name: nb
+    include: _norsumm_yaml
+    doc_to_text: "Lag en kort oppsummering som sammenfatter den følgende teksten i noen få punkter:\n{{article}}\n\nOppsummering:"
+  - task: prompt-5
+    dataset_name: nb
+    include: _norsumm_yaml
+    doc_to_text: "Hele artikkelen:\n{{article}}\n\nHovedpunkter:"

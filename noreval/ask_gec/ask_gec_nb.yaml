@@ -1,0 +1,17 @@
+group: ask_gec_nb
+task:
+  - task: prompt-0
+    include: _ask_gec_yaml
+    doc_to_text: "Tekst: {{source}}\nKorreksjon:"
+  - task: prompt-1
+    include: _ask_gec_yaml
+    doc_to_text: "Tekst: {{source}}\nRettet versjon:"
+  - task: prompt-2
+    include: _ask_gec_yaml
+    doc_to_text: "Skriv om følgende tekst slik at den blir grammatisk korrekt: {{source}}\nKorreksjon:"
+  - task: prompt-3
+    include: _ask_gec_yaml
+    doc_to_text: "Original versjon: {{source}}\nKorrekturlest og rettet versjon:"
+  - task: prompt-4
+    include: _ask_gec_yaml
+    doc_to_text: "Rett opp grammatiske feil i denne teksten: {{source}}\nKorreksjon:"

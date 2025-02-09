@@ -1,0 +1,4 @@
+task: noridiom
+dataset_name: nb
+include: _noridiom_yaml
+doc_to_text: "Fullfør dette uttrykket: {{idiom}}"

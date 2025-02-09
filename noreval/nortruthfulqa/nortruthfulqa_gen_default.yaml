@@ -1,0 +1,4 @@
+task: nortruthfulqa_gen
+dataset_name: nb
+include: _nortruthfulqa_gen_yaml
+doc_to_text: question

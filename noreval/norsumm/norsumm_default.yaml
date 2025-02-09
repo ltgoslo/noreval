@@ -1,0 +1,4 @@
+task: norsumm
+dataset_name: nb
+include: _norsumm_yaml
+doc_to_text: "Skriv en oppsummering av følgende artikkel med kun noen få punkter: {{article}}"

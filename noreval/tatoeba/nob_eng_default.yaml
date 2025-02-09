@@ -1,0 +1,7 @@
+group: tatoeba
+task: tatoeba_nob_eng
+include: _tatoeba_yaml
+dataset_name: eng-nob
+training_split: validation
+doc_to_text: "Bokmål: {{targetString}}\nEngelsk:"
+doc_to_target: sourceString
