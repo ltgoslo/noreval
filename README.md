@@ -222,10 +222,28 @@ In our paper, we compute BERTScore for most sequence-to-sequence generation task
 # 📝 Cite Us
 
 ```
-@article{mikhailov2025noreval,
-  title={NorEval: A Norwegian Language Understanding and Generation Evaluation Benchmark},
-  author={Mikhailov, Vladislav and Enstad, Tita and Samuel, David and Farseth{\aa}s, Hans Christian and Kutuzov, Andrey and Velldal, Erik and {\O}vrelid, Lilja},
-  journal={arXiv preprint arXiv:2504.07749},
-  year={2025}
+@inproceedings{mikhailov-etal-2025-noreval,
+    title = "{N}or{E}val: A {N}orwegian Language Understanding and Generation Evaluation Benchmark",
+    author = "Mikhailov, Vladislav  and
+      Enstad, Tita  and
+      Samuel, David  and
+      Farseth{\r{a}}s, Hans Christian  and
+      Kutuzov, Andrey  and
+      Velldal, Erik  and
+      {\O}vrelid, Lilja",
+    editor = "Che, Wanxiang  and
+      Nabende, Joyce  and
+      Shutova, Ekaterina  and
+      Pilehvar, Mohammad Taher",
+    booktitle = "Findings of the Association for Computational Linguistics: ACL 2025",
+    month = jul,
+    year = "2025",
+    address = "Vienna, Austria",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.findings-acl.181/",
+    doi = "10.18653/v1/2025.findings-acl.181",
+    pages = "3495--3541",
+    ISBN = "979-8-89176-256-5",
+    abstract = "This paper introduces NorEval, a new and comprehensive evaluation suite for large-scale standardized benchmarking of Norwegian generative language models (LMs). NorEval consists of 24 high-quality human-created datasets {--} of which five are created from scratch. In contrast to existing benchmarks for Norwegian, NorEval covers a broad spectrum of task categories targeting Norwegian language understanding and generation, establishes human baselines, and focuses on both of the official written standards of the Norwegian language: Bokm{\r{a}}l and Nynorsk. All our datasets and a collection of over 100 human-created prompts are integrated into LM Evaluation Harness, ensuring flexible and reproducible evaluation. We describe the NorEval design and present the results of benchmarking 19 open-source pretrained and instruction-tuned LMs for Norwegian in various scenarios. Our benchmark, evaluation framework, and annotation materials are publicly available."
 }
 ```
