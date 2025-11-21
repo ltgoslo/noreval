@@ -1,0 +1,7 @@
+group: nob_instruction
+task:
+  - norrewrite_instruct
+  - norsummarize_instruct
+aggregate_metric_list:
+  - metric: bleu
+    weight_by_size: True
