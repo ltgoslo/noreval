@@ -144,7 +144,9 @@ lm_eval \
 <details>
 <summary><b>Example 4: Zero-shot evaluation on task groups.</b></summary>
 
-Consider an example of conducting an evaluation on a task category of interest, e.g., Norwegian-specific & world knowledge. LM Evaluation Harness allows to group tasks as shown below; please find more details [here](https://github.com/EleutherAI/lm-evaluation-harness/blob/main/docs/task_guide.md#group-configuration).
+Consider an example of conducting an evaluation on a task category of interest, e.g., Norwegian-specific & world knowledge. LM Evaluation Harness allows to group tasks as shown below; please find more details [in the original documentation](https://github.com/EleutherAI/lm-evaluation-harness/blob/main/docs/task_guide.md#group-configuration).
+
+We also provide an example of possible grouping [here](./tools/groups/)
 
 **Step 1: Create a configuration file**
 
