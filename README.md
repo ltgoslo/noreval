@@ -10,10 +10,10 @@ NorEval is a multi-task Norwegian language understanding and generation evaluati
 
 ## 📖 Contents
 
-- [Overview](#😎-overview)
-- [Tasks](#🗃️-tasks)
-- [Installation and Usage](#👨🏻‍💻-installation-and-usage)
-- [Cite Us](#📝-cite-us)
+- [Overview](#-overview)
+- [Tasks](#️-tasks)
+- [Installation and Usage](#-installation-and-usage)
+- [Cite Us](#-cite-us)
 
 ## 😎 Overview
 
