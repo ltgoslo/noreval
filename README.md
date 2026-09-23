@@ -3,7 +3,7 @@
 NorEval is a multi-task Norwegian language understanding and generation evaluation benchmark. 
 
 ## 🔥 Updates
-* **`23.10.2026`**: 📊 Our interactive dashboard is available at
+* **`23.09.2026`**: 📊 Our interactive dashboard is available [here](https://ltgoslo.github.io/llm-dashboard/noreval/).
 * **`16.05.2025`**: 🎉 Our paper is accepted to [ACL 2025 Findings](https://2025.aclweb.org/program/find_papers/).
 * **`07.05.2025`**: 🫰 NorEval is now integrated into [LM Evaluation Harness](https://github.com/EleutherAI/lm-evaluation-harness/tree/main/lm_eval/tasks/noreval).
 * **`10.04.2025`**: 📕 Our pre-print is available on [arXiv](https://arxiv.org/abs/2504.07749).
@@ -33,7 +33,7 @@ NorEval is a multi-task Norwegian language understanding and generation evaluati
 
 ## 📊 Dashboard
 
-Explore the results of benchmarking Norwegian and multilingual LMs on NorEval in our [interactive dashboard](https://ltgoslo.github.io/llm-dashboard/noreval/). The dashboard lets you compare models on individual tasks or category averages across 0-shot, 1-shot, and 5-shot regimes, choose how the scores are aggregated over prompts and normalized, and filter models by size or by whether they are fully open.
+Explore the results of benchmarking Norwegian and multilingual models on NorEval in our [interactive dashboard](https://ltgoslo.github.io/llm-dashboard/noreval/). The dashboard lets you compare models on individual tasks or category averages across 0-shot, 1-shot, and 5-shot regimes, choose how the scores are aggregated over prompts and normalized, and filter models by size or by whether they are fully open.
 
 [![NorEval dashboard](images/dashboard.png)](https://ltgoslo.github.io/llm-dashboard/noreval/)
 
