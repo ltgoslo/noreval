@@ -3,6 +3,7 @@
 NorEval is a multi-task Norwegian language understanding and generation evaluation benchmark. 
 
 ## 🔥 Updates
+* **`23.10.2026`**: 📊 Our interactive dashboard is available at
 * **`16.05.2025`**: 🎉 Our paper is accepted to [ACL 2025 Findings](https://2025.aclweb.org/program/find_papers/).
 * **`07.05.2025`**: 🫰 NorEval is now integrated into [LM Evaluation Harness](https://github.com/EleutherAI/lm-evaluation-harness/tree/main/lm_eval/tasks/noreval).
 * **`10.04.2025`**: 📕 Our pre-print is available on [arXiv](https://arxiv.org/abs/2504.07749).
@@ -11,13 +12,14 @@ NorEval is a multi-task Norwegian language understanding and generation evaluati
 ## 📖 Contents
 
 - [Overview](#-overview)
+- [Dashboard](#-dashboard)
 - [Tasks](#️-tasks)
 - [Installation and Usage](#-installation-and-usage)
 - [Cite Us](#-cite-us)
 
 ## 😎 Overview
 
-![noreval](noreval.jpg)
+![noreval](images/noreval.jpg)
 
 **Overview of the NorEval design.**  😼 denotes datasets used in [NorBench](https://aclanthology.org/2023.nodalida-1.61/), [NLEBench](https://aclanthology.org/2024.emnlp-main.317/), [ScandEval](https://aclanthology.org/2023.nodalida-1.20/), and [SEB](https://proceedings.neurips.cc/paper_files/paper/2024/file/4746bb91bd073ec7eef930d5775122ba-Paper-Datasets_and_Benchmarks_Track.pdf), 🚀 represents datasets that have not been used in the existing Norwegian benchmarks, and 😎 denotes our novel datasets introduced as part of NorEval. EN=English; BM=Norwegian Bokmål; NN=Norwegian Nynorsk.
 
@@ -28,6 +30,12 @@ NorEval is a multi-task Norwegian language understanding and generation evaluati
 - 🧠 **Data quality**: focus on only peer-reviewed human-created datasets to ensure reliable evaluation in the context of the Norwegian language, culture, and values.
 - 📏 **Prompt sensitivity**: evaluation across 100+ human-written prompts to account for the prompt sensitivity.
 - 👩🏻‍🔬 **Standardized evaluation**: integration of NorEval into [LM Evaluation Harness](https://github.com/EleutherAI/lm-evaluation-harness) for flexible and reproducible evaluation.
+
+## 📊 Dashboard
+
+Explore the results of benchmarking Norwegian and multilingual LMs on NorEval in our [interactive dashboard](https://ltgoslo.github.io/llm-dashboard/noreval/). The dashboard lets you compare models on individual tasks or category averages across 0-shot, 1-shot, and 5-shot regimes, choose how the scores are aggregated over prompts and normalized, and filter models by size or by whether they are fully open.
+
+[![NorEval dashboard](images/dashboard.png)](https://ltgoslo.github.io/llm-dashboard/noreval/)
 
 # 🗃️ Tasks
 
