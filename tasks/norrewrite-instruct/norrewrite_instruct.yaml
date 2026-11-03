@@ -1,5 +1,7 @@
 task: norrewrite_instruct
 dataset_path: ltg/norrewrite-instruct
+dataset_kwargs:
+  revision: f7197b35d55de69d48302e397661a6c43667a6b0
 training_split: null
 test_split: test
 doc_to_text: "{{prompt}} {{context}}"

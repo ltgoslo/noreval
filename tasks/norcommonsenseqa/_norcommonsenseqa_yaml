@@ -1,4 +1,6 @@
 dataset_path: ltg/norcommonsenseqa
+dataset_kwargs:
+  revision: c8a282bc55cec9583466ccfd5884310b47ba9894
 output_type: multiple_choice
 training_split: null
 validation_split: null

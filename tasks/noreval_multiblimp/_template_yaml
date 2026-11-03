@@ -1,5 +1,7 @@
 task: noreval_multiblimp
 dataset_path: jumelet/multiblimp
+dataset_kwargs:
+  revision: de923efa8d2483d6b13364ee68e65308e990a991
 dataset_name: sme
 output_type: multiple_choice
 test_split: train

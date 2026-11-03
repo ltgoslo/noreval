@@ -1,5 +1,7 @@
 tag: norec_document
 dataset_path: ltg/norec_document
+dataset_kwargs:
+  revision: f5f71986e1c26d3b25e7044d286c8069ea6a0ec0
 task: norec_document_p3
 include: _norec_document_yaml
 doc_to_text: "Anmeldelse: {{review}}\nEr anmelderen positiv eller negativ?"

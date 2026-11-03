@@ -1,4 +1,6 @@
 dataset_path: ltg/noropenbookqa
+dataset_kwargs:
+  revision: b4712084a3d4610257cd3bfea53c4c5a582d9c9b
 output_type: multiple_choice
 training_split: train
 validation_split: null

@@ -1,4 +1,6 @@
 dataset_path: Sprakbanken/Norwegian_idioms
+dataset_kwargs:
+  revision: b3aea6a444a0c718d1740870db79245a762ce968
 training_split: null
 validation_split: null
 test_split: test

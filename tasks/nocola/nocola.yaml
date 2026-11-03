@@ -1,5 +1,7 @@
 task: nocola
 dataset_path: ltg/nocola
+dataset_kwargs:
+  revision: f967876aaf35a55aa651cf122b81ba33fe6c2bfe
 output_type: multiple_choice
 test_split: test
 doc_to_text: ""

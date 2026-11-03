@@ -1,4 +1,6 @@
 dataset_path: ltg/saami-tatoeba
+dataset_kwargs:
+  revision: 3869d397f39a742ad43e3836e26df0a63e89e4ff
 tag: tatoeba_nob_sme
 doc_to_target: text_sme
 task: tatoeba_nob_sme_p3

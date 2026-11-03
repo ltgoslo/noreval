@@ -1,5 +1,7 @@
 tag: norec_sentence
 dataset_path: ltg/norec_sentence
+dataset_kwargs:
+  revision: 5326d626b35e6da3a503e5303e39adf11250ba3d
 task: norec_sentence_p0
 include: _norec_sentence_yaml
 doc_to_text: "Tekst: {{review}}\nSentiment:"

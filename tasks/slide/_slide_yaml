@@ -1,5 +1,7 @@
 tag: slide
 dataset_path: ltg/slide
+dataset_kwargs:
+  revision: 8f31c336dff5709a3369b4442c3d54b6c8f0f253
 test_split: test
 training_split: train
 validation_split: validation

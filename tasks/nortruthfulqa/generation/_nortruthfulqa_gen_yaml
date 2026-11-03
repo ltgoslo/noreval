@@ -1,4 +1,6 @@
 dataset_path: ltg/nortruthfulqa_gen
+dataset_kwargs:
+  revision: a8f3b00ed45867a3272be621560ecf5ac6c8b13f
 output_type: generate_until
 training_split: null
 validation_split: validation

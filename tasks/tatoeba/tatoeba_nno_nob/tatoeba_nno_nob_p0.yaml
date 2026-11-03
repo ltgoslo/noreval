@@ -1,4 +1,6 @@
 dataset_path: ltg/norsumm-nob-nno-translation
+dataset_kwargs:
+  revision: da714e8734634a74b7f23b397b86629571b9894f
 tag: norsumm_nno_nob_translation
 doc_to_target: text_nob
 task: norsumm_nno_nob_translation_p0

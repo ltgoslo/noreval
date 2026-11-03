@@ -1,6 +1,6 @@
 dataset_path: ltg/nrk_quiz_qa
 dataset_kwargs:
-  revision: v1.0
+  revision: a61e8197940e43da7bf5dd87a7c0668417bcbebb
 output_type: multiple_choice
 training_split: null
 validation_split: null

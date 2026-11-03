@@ -1,5 +1,7 @@
 task: norsummarize_instruct
 dataset_path: ltg/norsummarize-instruct
+dataset_kwargs:
+  revision: c7751562e7681aa352177ce56e754d2eb0400010
 training_split: null
 test_split: test
 doc_to_text: "{{prompt}} {{context}}"

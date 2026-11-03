@@ -1,5 +1,7 @@
 tag: ask_gec
 dataset_path: ltg/ask-gec
+dataset_kwargs:
+  revision: 9871205efddb575e77c4b49443ff75e28e25deae
 output_type: generate_until
 training_split: train
 validation_split: validation

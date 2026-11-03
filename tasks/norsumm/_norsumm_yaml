@@ -1,4 +1,6 @@
 dataset_path: SamiaT/NorSumm
+dataset_kwargs:
+  revision: b281b1a0ba5b5ee550aa206171034e65a8ed0ec2
 training_split: null
 validation_split: null
 test_split: test

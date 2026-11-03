@@ -1,4 +1,6 @@
 dataset_path: Helsinki-NLP/tatoeba_mt
+dataset_kwargs:
+  revision: 7db98c55fbe29f031e67d043a2d460fb9888c196
 training_split: validation
 test_split: test
 output_type: generate_until

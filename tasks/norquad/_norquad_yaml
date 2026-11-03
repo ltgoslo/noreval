@@ -1,5 +1,7 @@
 tag: norquad
 dataset_path: ltg/norquad
+dataset_kwargs:
+  revision: be5b02011e6d8752797e75452732c36a3475b657
 output_type: generate_until
 training_split: train
 validation_split: validation
