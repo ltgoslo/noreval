@@ -3,11 +3,13 @@
 NorEval is a multi-task Norwegian language understanding and generation evaluation benchmark. 
 
 ### 🔥 Updates
+* **`03.11.2026`**: 📌 We release [NorEval v1.1.1](https://github.com/ltgoslo/noreval/releases/tag/v1.1.1), which pins every dataset to a fixed version for reproducible evaluation and fixes the Tatoeba English ↔ Bokmål/Nynorsk tasks.
+* **`17.10.2026`**: 🆕 We release [NorEval v1.1](https://github.com/ltgoslo/noreval/releases/tag/v1.1) with new tasks (SLIDE, NoCoLA, MultiBLiMP, NorOpenBookQA without facts, Bokmål ↔ Nynorsk and Bokmål ↔ Northern Sámi translation) and updated task configs.
 * **`15.10.2026`**: 📊 Our interactive dashboard is available [here](https://ltgoslo.github.io/llm-dashboard/noreval/).
 * **`16.05.2025`**: 🎉 Our paper is accepted to [ACL 2025 Findings](https://2025.aclweb.org/program/find_papers/).
 * **`07.05.2025`**: 🫰 NorEval is now integrated into [LM Evaluation Harness](https://github.com/EleutherAI/lm-evaluation-harness/tree/main/lm_eval/tasks/noreval).
 * **`10.04.2025`**: 📕 Our pre-print is available on [arXiv](https://arxiv.org/abs/2504.07749).
-* **`09.04.2025`**: 🚀 We release NorEval, including our [annotation guidelines](./guidelines/) and novel datasets ([NorRewrite-Instruct](https://huggingface.co/datasets/ltg/norrewrite-instruct) & [NorSummarize-Instruct](https://huggingface.co/datasets/ltg/norsummarize-instruct)).
+* **`09.04.2025`**: 🚀 We release NorEval v1.0, including our [annotation guidelines](./guidelines/) and novel datasets ([NorRewrite-Instruct](https://huggingface.co/datasets/ltg/norrewrite-instruct) & [NorSummarize-Instruct](https://huggingface.co/datasets/ltg/norsummarize-instruct)).
 
 ### 📖 Contents
 
