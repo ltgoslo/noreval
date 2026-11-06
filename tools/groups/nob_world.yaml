@@ -1,0 +1,10 @@
+group: nob_world
+task:
+  - nrk_quiz_qa_nob
+  - noropenbookqa_nob
+  - norbelebele
+  - nortruthfulqa_mc_nob
+  - norcommonsenseqa_nob
+aggregate_metric_list:
+  - metric: acc
+    weight_by_size: True
