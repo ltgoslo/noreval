@@ -2,7 +2,7 @@ group: nob_world
 task:
   - nrk_quiz_qa_nob
   - noropenbookqa_nob
-  - norbelebele
+  - norbelebele_nob
   - nortruthfulqa_mc_nob
   - norcommonsenseqa_nob
 aggregate_metric_list:

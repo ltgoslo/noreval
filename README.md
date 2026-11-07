@@ -39,43 +39,37 @@ Explore the results of benchmarking Norwegian and multilingual models on NorEval
 
 ### 🗃️ Tasks
 
-|Name  |Bokmål | Nynorsk  | Northern Sámi | Task formulation  | Task category |
-|:---|:---|:---|:---|:---|:---|
-|[NoReC Sentence](https://huggingface.co/datasets/ltg/norec_sentence) |`norec_sentence`  | — | — |Text classification| Language understanding |
-|[NoReC Document](https://huggingface.co/datasets/ltg/norec_document) |`norec_document`  | — | — |Text classification| Language understanding |
-|[SLIDE](https://huggingface.co/datasets/ltg/slide) |`slide`  | `slide` | — |Text classification| Linguistic knowledge |
-|[NCB](https://huggingface.co/datasets/hcfa/ncb) |`ncb`| — | — |Text classification| Linguistic knowledge   |
-|[NoCoLA](https://huggingface.co/datasets/ltg/nocola) |`nocola`| — | — |Text classification| Linguistic knowledge   |
-|[MultiBLiMP](https://huggingface.co/datasets/jumelet/multiblimp) | — | — |`noreval_multiblimp`|Text classification| Linguistic knowledge |
-|[NorIdiom](https://huggingface.co/datasets/Sprakbanken/Norwegian_idioms) |`noridiom_nob`  | `noridiom_nno`  | — |Text classification| Linguistic knowledge |
-|[NorBelebele](https://huggingface.co/datasets/ltg/norbelebele) |`norbelebele`| —| — |Text classification| Language understanding |
-|[NRK-Quiz-QA](https://huggingface.co/datasets/ltg/nrk_quiz_qa) |`nrk_quiz_qa_nob`| `nrk_quiz_qa_nno`| — |Text classification| World knowledge and reasoning |
-|[NorOpenBookQA](https://huggingface.co/datasets/ltg/noropenbookqa) |`noropenbookqa_nob`| `noropenbookqa_nno` | — |Text classification| Language understanding |
-|[NorOpenBookQA (without facts)](https://huggingface.co/datasets/ltg/noropenbookqa) |`noropenbookqa_no_fact_nob`| `noropenbookqa_no_fact_nno` | — |Text classification| World knowledge and reasoning |
-|[NorCommonsenseQA](https://huggingface.co/datasets/ltg/norcommonsenseqa) |`norcommonsenseqa_nob`| `norcommonsenseqa_nno` | — |Text classification|World knowledge and reasoning  |
-|[NorTruthfulQA Multiple choice](https://huggingface.co/datasets/ltg/nortruthfulqa_mc) |`nortruthfulqa_mc_nob`| `nortruthfulqa_mc_nno` | — |Text classification | World knowledge and reasoning |
-|[NorTruthfulQA Generation](https://huggingface.co/datasets/ltg/nortruthfulqa_gen) |`nortruthfulqa_gen_nob`| `nortruthfulqa_gen_nno` | — | Text generation|World knowledge and reasoning |
-|[NorQuAD](https://huggingface.co/datasets/ltg/norquad) |`norquad`| —  | — |Text generation| Language understanding |
-|[ASK-GEC](https://huggingface.co/datasets/ltg/ask-gec) |`ask_gec`| — | — |Text generation| Linguistic knowledge |
-|[NorSumm](https://huggingface.co/datasets/SamiaT/NorSumm)  |`norsumm_nob` | `norsumm_nno`  | — |Text generation| Generation and summarization |
-|[NorSumm Translation (Bokmål ↔ Nynorsk)](https://huggingface.co/datasets/ltg/norsumm-nob-nno-translation) | `norsumm_nob_nno_translation`| `norsumm_nno_nob_translation`  | — |Text generation|Generation and summarization |
-|[Tatoeba (English → Bokmål/Nynorsk)](https://huggingface.co/datasets/Helsinki-NLP/tatoeba_mt) | `tatoeba_eng_nob`| `tatoeba_eng_nno`  | — |Text generation|Machine translation |
-|[Tatoeba (Bokmål/Nynorsk → English)](https://huggingface.co/datasets/Helsinki-NLP/tatoeba_mt) | `tatoeba_nob_eng`| `tatoeba_nno_eng`  | — |Text generation|Machine translation |
-|[Tatoeba (Bokmål ↔ Northern Sámi)](https://huggingface.co/datasets/ltg/saami-tatoeba) | `tatoeba_sme_nob` | — | `tatoeba_nob_sme`|Text generation|Machine translation |
-|[NorRewrite-Instruct](https://huggingface.co/datasets/ltg/norrewrite-instruct) |`norrewrite_instruct`  | — | — |Text generation|Generation and summarization|
-|[NorSummarize-Instruct](https://huggingface.co/datasets/ltg/norsummarize-instruct) |`norsummarize_instruct` | — | — |Text generation|Generation and summarization|
+The task names end with the language code: `nob` (Bokmål), `nno` (Nynorsk), `sme` (Northern Sámi), `eng` (English); a translation task name lists the source language first. Each name runs all prompts of the task and, for multiple-choice tasks, all task formulations.
 
-<details>
-<summary><b>Table description</b></summary>
-
-* **Name**: a dataset name with a HuggingFace link.
-* **Bokmål**: the LM Evaluation Harness task name for the Norwegian Bokmål dataset. `slide`, which covers Bokmål, Nynorsk, Danish, and Swedish, is also listed here.
-* **Nynorsk**: the LM Evaluation Harness task name for the Norwegian Nynorsk dataset, if available.
-* **Northern Sámi**: the LM Evaluation Harness task name for the Northern Sámi dataset, if available. Translation tasks between Bokmål and Northern Sámi are listed here.
-* **Task type**: the task type.
-* **Task category**: the task category.
-
-</details>
+| Dataset | Tasks | Type |
+|:---|:---|:---|
+| **Linguistic knowledge** | | |
+| [NCB](https://huggingface.co/datasets/hcfa/ncb) | `ncb_nob` | Multiple choice |
+| [NoCoLA](https://huggingface.co/datasets/ltg/nocola) | `nocola_nob` | Multiple choice |
+| [SLIDE](https://huggingface.co/datasets/ltg/slide) | `slide_nob_nno_swe_dan` | Multiple choice |
+| [MultiBLiMP](https://huggingface.co/datasets/jumelet/multiblimp) | `multiblimp_ltg_sme` | Multiple choice |
+| [NorIdiom](https://huggingface.co/datasets/Sprakbanken/Norwegian_idioms) | `noridiom_nob`, `noridiom_nno` | Generation |
+| [ASK-GEC](https://huggingface.co/datasets/ltg/ask-gec) | `ask_gec_nob` | Generation |
+| **Language understanding** | | |
+| [NoReC Sentence](https://huggingface.co/datasets/ltg/norec_sentence) | `norec_sentence_nob` | Multiple choice |
+| [NoReC Document](https://huggingface.co/datasets/ltg/norec_document) | `norec_document_nob` | Multiple choice |
+| [NorBelebele](https://huggingface.co/datasets/ltg/norbelebele) | `norbelebele_nob` | Multiple choice |
+| [NorOpenBookQA](https://huggingface.co/datasets/ltg/noropenbookqa) | `noropenbookqa_nob`, `noropenbookqa_nno` | Multiple choice |
+| [NorQuAD](https://huggingface.co/datasets/ltg/norquad) | `norquad_nob` | Generation |
+| **World knowledge and reasoning** | | |
+| [NRK-Quiz-QA](https://huggingface.co/datasets/ltg/nrk_quiz_qa) | `nrk_quiz_qa_nob`, `nrk_quiz_qa_nno` | Multiple choice |
+| [NorOpenBookQA (without facts)](https://huggingface.co/datasets/ltg/noropenbookqa) | `noropenbookqa_no_fact_nob`, `noropenbookqa_no_fact_nno` | Multiple choice |
+| [NorCommonsenseQA](https://huggingface.co/datasets/ltg/norcommonsenseqa) | `norcommonsenseqa_nob`, `norcommonsenseqa_nno` | Multiple choice |
+| [NorTruthfulQA](https://huggingface.co/datasets/ltg/nortruthfulqa_mc) | `nortruthfulqa_mc_nob`, `nortruthfulqa_mc_nno` | Multiple choice |
+| [NorTruthfulQA](https://huggingface.co/datasets/ltg/nortruthfulqa_gen) | `nortruthfulqa_gen_nob`, `nortruthfulqa_gen_nno` | Generation |
+| **Generation and summarization** | | |
+| [NorSumm](https://huggingface.co/datasets/SamiaT/NorSumm) | `norsumm_nob`, `norsumm_nno` | Generation |
+| [NorRewrite-Instruct](https://huggingface.co/datasets/ltg/norrewrite-instruct) | `norrewrite_instruct_nob` | Generation |
+| [NorSummarize-Instruct](https://huggingface.co/datasets/ltg/norsummarize-instruct) | `norsummarize_instruct_nob` | Generation |
+| **Machine translation** | | |
+| [NorSumm Translation](https://huggingface.co/datasets/ltg/norsumm-nob-nno-translation) | `translation_nob_nno`, `translation_nno_nob` | Generation |
+| [Tatoeba](https://huggingface.co/datasets/Helsinki-NLP/tatoeba_mt) | `translation_eng_nob`, `translation_nob_eng`, `translation_eng_nno`, `translation_nno_eng` | Generation |
+| [Sámi Tatoeba](https://huggingface.co/datasets/ltg/saami-tatoeba) | `translation_nob_sme`, `translation_sme_nob` | Generation |
 
 ### 👨🏻‍💻 How to use
 
@@ -93,15 +87,15 @@ lm_eval \
   --model hf \
   --model_args pretrained=norallm/normistral-7b-warm \
   --include_path noreval \
-  --tasks norquad \
-  --output results/norquad/0-shot/ \
+  --tasks norquad_nob \
+  --output results/norquad_nob/0-shot/ \
   --show_config \
   --write_out \
   --batch_size auto \
   --num_fewshot 0
 ```
 
-* The task names in the table above run all prompt variants of a dataset at once; append a prompt index to run a single variant (e.g. `norquad_p2`).
+* The task names in the table above run all variants of a task at once. To run a single variant, append the prompt index (e.g. `norquad_nob_p2`); for multiple-choice tasks, also add the task formulation, `cf`, `hybrid` or `mcf` (e.g. `norbelebele_nob_mcf_p2`, or `norbelebele_nob_mcf` for all prompts of one formulation).
 * Tasks loaded via `--include_path` take precedence over any same-named NorEval tasks bundled with the harness, so this repository is the source of truth for the task definitions.
 
 
