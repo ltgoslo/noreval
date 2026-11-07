@@ -11,9 +11,15 @@ process_results: !function utils.process_results
 generation_kwargs:
   until:
     - "\n"
-  do_sample: false
+  do_sample: true
+  temperature: 1.0
+  top_p: 1.0
+  top_k: 0
   max_new_tokens: 256
 metric_list:
+  - metric: rougeL_max
+    aggregation: mean
+    higher_is_better: true
   - metric: rougeL_avg
     aggregation: mean
     higher_is_better: true
@@ -23,9 +29,6 @@ metric_list:
   - metric: bleu_avg
     aggregation: mean
     higher_is_better: true
-  - metric: rougeL_max
-    aggregation: mean
-    higher_is_better: true
   - metric: bertscore_f1_max
     aggregation: mean
     higher_is_better: true
@@ -33,4 +36,4 @@ metric_list:
     aggregation: mean
     higher_is_better: true
 metadata:
-  version: 1.1
+  version: 1.2

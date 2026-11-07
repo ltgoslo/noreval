@@ -1,9 +1,0 @@
-dataset_path: ltg/norsumm-nob-nno-translation
-dataset_kwargs:
-  revision: da714e8734634a74b7f23b397b86629571b9894f
-tag: norsumm_nob_nno_translation
-doc_to_target: text_nno
-task: norsumm_nob_nno_translation_p3
-include: _tatoeba_nob_nno_yaml
-training_split: test
-doc_to_text: "Hva blir \"{{text_nob}}\" på nynorsk?\nNynorsk:"

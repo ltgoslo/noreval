@@ -1,8 +1,0 @@
-include: ../_noropenbookqa_yaml
-dataset_name: nb
-metadata:
-  version: 1.1
-  primary_metric: acc
-  random_baseline: 0.25
-  category: world_knowledge_and_reasoning
-  language: nob

@@ -17,8 +17,9 @@ Then run the task normally — no `--predict_only`:
 lm_eval \
   --model hf \
   --model_args pretrained=AI-Sweden-Models/Llama-3-8B \
-  --tasks ask_gec \
-  --output results/ask_gec/0-shot/ \
+  --include_path path/to/noreval/tasks \
+  --tasks ask_gec_nob \
+  --output results/ask_gec_nob/0-shot/ \
   --log_samples \
   --show_config \
   --write_out \
@@ -26,10 +27,12 @@ lm_eval \
   --num_fewshot 0
 ```
 
-`errant` is reported in `results.json` alongside every other task. It carries no
-stderr: ERRANT scores the corpus as a whole, and the aggregation is deliberately
-excluded from the bootstrappable metrics in `lm_eval.api.metrics`, so it runs
-exactly once rather than `bootstrap_iters` times.
+`errant_f05` is reported in `results.json` alongside every other task, with its
+standard error under `errant_f05_stderr`: the expensive ERRANT corpus pass runs
+exactly once (cached on the item content), per-sentence TP/FP/FN counts are
+recovered from the M2 files and verified against `errant_compare`'s corpus
+score, and the stderr is a seeded bootstrap over documents — each document's K
+sampled corrections are resampled together.
 
 If ERRANT or the spaCy model is missing, the metric is reported as `NaN` and the
 reason is logged, so an incomplete environment costs this one metric rather than
@@ -41,7 +44,7 @@ The two-step workflow still works if you prefer to score outside the eval job �
 pass `--predict_only` above, then:
 
 ```bash
-python3 ask_gec/errant.py --fpath results/ask_gec/0-shot/AI-Sweden-Models__Llama-3-8B/samples_ask_gec_p0_2025-01-28T01-08-13.454441.jsonl --out_fdir results/ask_gec/0-shot/AI-Sweden-Models__Llama-3-8B/
+python3 ask_gec/errant.py --fpath results/ask_gec_nob/0-shot/AI-Sweden-Models__Llama-3-8B/samples_ask_gec_nob_p0_2025-01-28T01-08-13.454441.jsonl --out_fdir results/ask_gec_nob/0-shot/AI-Sweden-Models__Llama-3-8B/
 ```
 
 The results are saved as `..._errant.json`.

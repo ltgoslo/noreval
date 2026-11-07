@@ -4,7 +4,6 @@ from evaluate import load
 
 
 try:
-    # import bert_score
     import bert_score
     import sacrebleu
     from rouge_score import rouge_scorer, scoring
@@ -34,8 +33,7 @@ def clean_summaries(dataset):
     return dataset.map(clean_doc)
 
 
-def process_results(doc, results):
-    completion = results[0]
+def _score_one(doc, completion):
     references = doc["summaries"]
 
     bleu_scores = [bleu([[reference]], [completion]) for reference in references]
@@ -62,6 +60,12 @@ def process_results(doc, results):
         "bertscore_f1_max": bertscore_f1_max,
         "bertscore_f1_avg": bertscore_f1_avg,
     }
+
+
+def process_results(doc, results):
+    # results[0] holds the K sampled generations; average their scores
+    scored = [_score_one(doc, completion) for completion in results[0]]
+    return {key: sum(s[key] for s in scored) / len(scored) for key in scored[0]}
 
 
 def bleu(refs, preds):
@@ -111,6 +115,11 @@ def rouge(refs, preds):
         summary = summary.replace(" . ", ".\n")
         return summary
 
+    # A single (ref, pred) pair needs no bootstrap: the aggregate's `mid` is exactly that pair's score
+    if len(refs) == 1 and len(preds) == 1:
+        score = scorer.score(_prepare_summary(refs[0]), _prepare_summary(preds[0]))
+        return {type: score[type].fmeasure * 100 for type in rouge_types}
+
     # Accumulate confidence intervals.
     aggregator = scoring.BootstrapAggregator()
     for ref, pred in zip(refs, preds):
@@ -140,4 +149,5 @@ def bertscore_f1(references, predictions):
         references=references,
         model_type="bert-base-multilingual-cased",
         num_layers=9,
+        device="cpu",
     )["f1"][0]

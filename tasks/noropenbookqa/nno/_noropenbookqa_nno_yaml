@@ -1,7 +1,8 @@
 include: ../_noropenbookqa_yaml
 dataset_name: nn
+process_results: !function utils.process_results
 metadata:
-  version: 1.1
+  version: 1.2
   primary_metric: acc
   random_baseline: 0.25
   category: language_understanding

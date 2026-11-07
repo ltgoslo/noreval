@@ -1,3 +1,0 @@
-task: noreval_multiblimp_SG-PL
-include: _template_yaml
-process_docs: !function utils.filter_dataset_sg_pl

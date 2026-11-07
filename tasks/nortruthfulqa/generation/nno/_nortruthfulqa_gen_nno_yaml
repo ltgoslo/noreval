@@ -1,8 +1,0 @@
-include: ../_nortruthfulqa_gen_yaml
-dataset_name: nn
-metadata:
-  version: 1.1
-  primary_metric: rougeL_max
-  random_baseline: 0.0
-  category: world_knowledge_and_reasoning
-  language: nno

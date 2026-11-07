@@ -8,7 +8,10 @@ output_type: generate_until
 doc_to_target: "{{accepted_completions[0]}}"
 process_results: !function utils.process_results
 generation_kwargs:
-  do_sample: false
+  do_sample: true
+  temperature: 1.0
+  top_p: 1.0
+  top_k: 0
   max_new_tokens: 16
 metric_list:
   - metric: em_first
@@ -21,4 +24,4 @@ metric_list:
     aggregation: mean
     higher_is_better: true
 metadata:
-  version: 1.1
+  version: 1.2

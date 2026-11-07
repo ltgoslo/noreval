@@ -1,7 +1,0 @@
-include: ../_tatoeba_yaml
-metadata:
-  version: 1.1
-  primary_metric: bleu
-  random_baseline: 0.0
-  category: machine_translation
-  language: [nno, eng]
