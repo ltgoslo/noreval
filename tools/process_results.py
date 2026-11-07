@@ -8,13 +8,17 @@ import matplotlib.pyplot as plt
 
 # Mapping from task groups to aggregated metrics
 mapping = {
-    "nob_sentiment_analysis": "f1,none",
+    "nob_sentiment_analysis_cf": "f1,none",
+    "nob_sentiment_analysis_hybrid": "f1,none",
+    "nob_sentiment_analysis_mcf": "f1,none",
     "nob_reading": "f1,none",
     "nob_instruction": "bleu,none",
     "nob_mt": "bleu,none",
     "nob_language": "fscore,none",
     "nob_generation": "rougeL_max,none",
-    "nob_world": "acc,none",
+    "nob_world_cf": "acc,none",
+    "nob_world_hybrid": "acc,none",
+    "nob_world_mcf": "acc,none",
     "nob_orthography": "acc,none",
 }
 
@@ -31,7 +35,7 @@ if __name__ == "__main__":
     arg(
         "--benchmark",
         "-b",
-        help="Benchmarks to process, split by comma (e.g., 'nob_sentiment_analysis,nob_instruction')",
+        help="Benchmarks to process, split by comma (e.g., 'nob_sentiment_analysis_mcf,nob_instruction')",
         required=True,
     )
     arg("--shots", "-s", help="Number of shots", default=0, type=int)

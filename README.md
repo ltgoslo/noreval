@@ -73,7 +73,7 @@ The task names end with the language code: `nob` (Bokmål), `nno` (Nynorsk), `sm
 
 ### 👨🏻‍💻 How to use
 
-The tasks are plain [LM Evaluation Harness](https://github.com/EleutherAI/lm-evaluation-harness) configs — no fork of the harness is needed. Install the harness, clone this repository, and point the harness to it with `--include_path`:
+The tasks are plain [LM Evaluation Harness](https://github.com/EleutherAI/lm-evaluation-harness) configs, meaning no fork of the `lm-evaluation-harness` is needed. Install the harness, clone this repository, and point the harness to it with `--include_path`:
 
 ```bash
 pip install lm-eval  # or lm-eval[vllm] for the vLLM backend
