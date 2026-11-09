@@ -144,7 +144,7 @@ def rouge(refs, preds):
 
     # Accumulate confidence intervals.
     aggregator = scoring.BootstrapAggregator()
-    for ref, pred in zip(refs, preds):
+    for ref, pred in zip(refs, preds, strict=False):
         ref = _prepare_summary(ref)
         pred = _prepare_summary(pred)
         aggregator.add_scores(scorer.score(ref, pred))

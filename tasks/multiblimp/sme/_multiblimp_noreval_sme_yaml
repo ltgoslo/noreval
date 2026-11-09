@@ -1,4 +1,4 @@
-include: ../_multiblimp_ltg_yaml
+include: ../_multiblimp_noreval_yaml
 dataset_name: sme
 doc_to_choice: !function utils.choices
 process_results: !function utils.process_results

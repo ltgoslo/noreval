@@ -32,7 +32,9 @@ def _labeled_choices(doc):
     """Options as a labeled list, e.g. 'A. ...' (used by mcf formations)."""
     return "".join(
         f"\n {label}. {choice}"
-        for label, choice in zip(_labels(doc), doc["mc1_targets"]["choices"])
+        for label, choice in zip(
+            _labels(doc), doc["mc1_targets"]["choices"], strict=True
+        )
     )
 
 
@@ -83,7 +85,7 @@ def cf_p2_nn(doc):
 
 
 def hybrid_p2_nn(doc):
-    return "Spørsmål: {question}\n\nKva av følgande alternativ er rett svar på spørsmålet?{choices}".format(
+    return "Spørsmål: {question}\n\nKva av følgande alternativ er rett svar på spørsmålet?{choices}\n\nSvar:".format(
         question=doc["question"], choices=_unlabeled_choices(doc)
     )
 
@@ -102,7 +104,7 @@ def cf_p3_nn(doc):
 
 
 def hybrid_p3_nn(doc):
-    return "Gitt følgande spørsmål, kva av dei moglege svara under er rett?\nSpørsmål: {question}\n{choices}".format(
+    return "Gitt følgande spørsmål, kva av dei moglege svara under er rett?\nSpørsmål: {question}\n{choices}\n\nSvar:".format(
         question=doc["question"], choices=_unlabeled_choices(doc)
     )
 
@@ -149,5 +151,5 @@ def gold(doc):
     return [doc["mc1_targets"]["labels"].index(1)]
 
 
-process_results = make_process_results(choices_text, gold)      # cf / hybrid
+process_results = make_process_results(choices_text, gold)  # cf / hybrid
 process_results_mcf = make_process_results(mcf_labels_nn, gold)

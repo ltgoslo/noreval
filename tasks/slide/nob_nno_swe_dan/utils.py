@@ -23,6 +23,6 @@ def gold(doc):
     return doc["correct_indices"]
 
 
-process_results = make_process_results(choices_words, gold)     # cf / hybrid
+process_results = make_process_results(choices_words, gold)  # cf / hybrid
 process_results_mcf = make_process_results(choices_letters, gold)
 process_results_mcf_paren = make_process_results(choices_letters_paren, gold)

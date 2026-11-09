@@ -1,0 +1,735 @@
+{
+  "ask_gec_nob": {
+    "category": "linguistic_knowledge",
+    "language": [
+      "nob"
+    ],
+    "primary_metric": "errant_f05",
+    "random_baseline": 0.0,
+    "max_score": 1.0,
+    "version": 1.2,
+    "variants": [
+      "ask_gec_nob_p0",
+      "ask_gec_nob_p1",
+      "ask_gec_nob_p2",
+      "ask_gec_nob_p3",
+      "ask_gec_nob_p4"
+    ]
+  },
+  "multiblimp_noreval_sme": {
+    "category": "linguistic_knowledge",
+    "language": [
+      "sme"
+    ],
+    "primary_metric": "acc",
+    "random_baseline": 0.5,
+    "max_score": 1.0,
+    "version": 1.2,
+    "variants": [
+      "multiblimp_noreval_sme_1-2",
+      "multiblimp_noreval_sme_1-3",
+      "multiblimp_noreval_sme_2-1",
+      "multiblimp_noreval_sme_2-3",
+      "multiblimp_noreval_sme_3-1",
+      "multiblimp_noreval_sme_3-2",
+      "multiblimp_noreval_sme_DU-PL",
+      "multiblimp_noreval_sme_DU-SG",
+      "multiblimp_noreval_sme_PL-DU",
+      "multiblimp_noreval_sme_PL-SG",
+      "multiblimp_noreval_sme_SG-DU",
+      "multiblimp_noreval_sme_SG-PL"
+    ]
+  },
+  "ncb_nob": {
+    "category": "linguistic_knowledge",
+    "language": [
+      "nob"
+    ],
+    "primary_metric": "acc",
+    "random_baseline": 0.5,
+    "max_score": 1.0,
+    "version": 1.2,
+    "variants": [
+      "ncb_nob"
+    ]
+  },
+  "nocola_nob": {
+    "category": "linguistic_knowledge",
+    "language": [
+      "nob"
+    ],
+    "primary_metric": "acc",
+    "random_baseline": 0.5,
+    "max_score": 1.0,
+    "version": 1.2,
+    "variants": [
+      "nocola_nob"
+    ]
+  },
+  "norbelebele_nob": {
+    "category": "language_understanding",
+    "language": [
+      "nob"
+    ],
+    "primary_metric": "acc",
+    "random_baseline": 0.25,
+    "max_score": 1.0,
+    "version": 1.2,
+    "variants": [
+      "norbelebele_nob_cf_p0",
+      "norbelebele_nob_cf_p1",
+      "norbelebele_nob_cf_p2",
+      "norbelebele_nob_cf_p3",
+      "norbelebele_nob_cf_p4",
+      "norbelebele_nob_hybrid_p0",
+      "norbelebele_nob_hybrid_p1",
+      "norbelebele_nob_hybrid_p2",
+      "norbelebele_nob_hybrid_p3",
+      "norbelebele_nob_hybrid_p4",
+      "norbelebele_nob_mcf_p0",
+      "norbelebele_nob_mcf_p1",
+      "norbelebele_nob_mcf_p2",
+      "norbelebele_nob_mcf_p3",
+      "norbelebele_nob_mcf_p4"
+    ]
+  },
+  "norcommonsenseqa_nno": {
+    "category": "world_knowledge_and_reasoning",
+    "language": [
+      "nno"
+    ],
+    "primary_metric": "acc",
+    "random_baseline": 0.2,
+    "max_score": 1.0,
+    "version": 1.2,
+    "variants": [
+      "norcommonsenseqa_nno_cf_p0",
+      "norcommonsenseqa_nno_cf_p1",
+      "norcommonsenseqa_nno_cf_p2",
+      "norcommonsenseqa_nno_cf_p3",
+      "norcommonsenseqa_nno_cf_p4",
+      "norcommonsenseqa_nno_hybrid_p0",
+      "norcommonsenseqa_nno_hybrid_p1",
+      "norcommonsenseqa_nno_hybrid_p2",
+      "norcommonsenseqa_nno_hybrid_p3",
+      "norcommonsenseqa_nno_hybrid_p4",
+      "norcommonsenseqa_nno_mcf_p0",
+      "norcommonsenseqa_nno_mcf_p1",
+      "norcommonsenseqa_nno_mcf_p2",
+      "norcommonsenseqa_nno_mcf_p3",
+      "norcommonsenseqa_nno_mcf_p4"
+    ]
+  },
+  "norcommonsenseqa_nob": {
+    "category": "world_knowledge_and_reasoning",
+    "language": [
+      "nob"
+    ],
+    "primary_metric": "acc",
+    "random_baseline": 0.2,
+    "max_score": 1.0,
+    "version": 1.2,
+    "variants": [
+      "norcommonsenseqa_nob_cf_p0",
+      "norcommonsenseqa_nob_cf_p1",
+      "norcommonsenseqa_nob_cf_p2",
+      "norcommonsenseqa_nob_cf_p3",
+      "norcommonsenseqa_nob_cf_p4",
+      "norcommonsenseqa_nob_hybrid_p0",
+      "norcommonsenseqa_nob_hybrid_p1",
+      "norcommonsenseqa_nob_hybrid_p2",
+      "norcommonsenseqa_nob_hybrid_p3",
+      "norcommonsenseqa_nob_hybrid_p4",
+      "norcommonsenseqa_nob_mcf_p0",
+      "norcommonsenseqa_nob_mcf_p1",
+      "norcommonsenseqa_nob_mcf_p2",
+      "norcommonsenseqa_nob_mcf_p3",
+      "norcommonsenseqa_nob_mcf_p4"
+    ]
+  },
+  "norec_document_nob": {
+    "category": "language_understanding",
+    "language": [
+      "nob"
+    ],
+    "primary_metric": "f1",
+    "random_baseline": 0.4850709806,
+    "max_score": 1.0,
+    "version": 1.2,
+    "variants": [
+      "norec_document_nob_cf_p0",
+      "norec_document_nob_cf_p1",
+      "norec_document_nob_cf_p2",
+      "norec_document_nob_cf_p3",
+      "norec_document_nob_cf_p4",
+      "norec_document_nob_hybrid_p0",
+      "norec_document_nob_hybrid_p1",
+      "norec_document_nob_hybrid_p2",
+      "norec_document_nob_hybrid_p3",
+      "norec_document_nob_hybrid_p4",
+      "norec_document_nob_mcf_p0",
+      "norec_document_nob_mcf_p1",
+      "norec_document_nob_mcf_p2",
+      "norec_document_nob_mcf_p3",
+      "norec_document_nob_mcf_p4"
+    ]
+  },
+  "norec_sentence_nob": {
+    "category": "language_understanding",
+    "language": [
+      "nob"
+    ],
+    "primary_metric": "f1",
+    "random_baseline": 0.4815172167,
+    "max_score": 1.0,
+    "version": 1.2,
+    "variants": [
+      "norec_sentence_nob_cf_p0",
+      "norec_sentence_nob_cf_p1",
+      "norec_sentence_nob_cf_p2",
+      "norec_sentence_nob_cf_p3",
+      "norec_sentence_nob_cf_p4",
+      "norec_sentence_nob_hybrid_p0",
+      "norec_sentence_nob_hybrid_p1",
+      "norec_sentence_nob_hybrid_p2",
+      "norec_sentence_nob_hybrid_p3",
+      "norec_sentence_nob_hybrid_p4",
+      "norec_sentence_nob_mcf_p0",
+      "norec_sentence_nob_mcf_p1",
+      "norec_sentence_nob_mcf_p2",
+      "norec_sentence_nob_mcf_p3",
+      "norec_sentence_nob_mcf_p4"
+    ]
+  },
+  "noridiom_nno": {
+    "category": "linguistic_knowledge",
+    "language": [
+      "nno"
+    ],
+    "primary_metric": "em_first",
+    "random_baseline": 0.0,
+    "max_score": 1.0,
+    "version": 1.2,
+    "variants": [
+      "noridiom_nno_p0",
+      "noridiom_nno_p1",
+      "noridiom_nno_p2",
+      "noridiom_nno_p3",
+      "noridiom_nno_p4"
+    ]
+  },
+  "noridiom_nob": {
+    "category": "linguistic_knowledge",
+    "language": [
+      "nob"
+    ],
+    "primary_metric": "em_first",
+    "random_baseline": 0.0,
+    "max_score": 1.0,
+    "version": 1.2,
+    "variants": [
+      "noridiom_nob_p0",
+      "noridiom_nob_p1",
+      "noridiom_nob_p2",
+      "noridiom_nob_p3",
+      "noridiom_nob_p4"
+    ]
+  },
+  "noropenbookqa_nno": {
+    "category": "language_understanding",
+    "language": [
+      "nno"
+    ],
+    "primary_metric": "acc",
+    "random_baseline": 0.25,
+    "max_score": 1.0,
+    "version": 1.2,
+    "variants": [
+      "noropenbookqa_nno_cf_p0",
+      "noropenbookqa_nno_cf_p1",
+      "noropenbookqa_nno_cf_p2",
+      "noropenbookqa_nno_cf_p3",
+      "noropenbookqa_nno_cf_p4",
+      "noropenbookqa_nno_hybrid_p0",
+      "noropenbookqa_nno_hybrid_p1",
+      "noropenbookqa_nno_hybrid_p2",
+      "noropenbookqa_nno_hybrid_p3",
+      "noropenbookqa_nno_hybrid_p4",
+      "noropenbookqa_nno_mcf_p0",
+      "noropenbookqa_nno_mcf_p1",
+      "noropenbookqa_nno_mcf_p2",
+      "noropenbookqa_nno_mcf_p3",
+      "noropenbookqa_nno_mcf_p4"
+    ]
+  },
+  "noropenbookqa_no_fact_nno": {
+    "category": "world_knowledge_and_reasoning",
+    "language": [
+      "nno"
+    ],
+    "primary_metric": "acc",
+    "random_baseline": 0.25,
+    "max_score": 1.0,
+    "version": 1.2,
+    "variants": [
+      "noropenbookqa_no_fact_nno_cf_p0",
+      "noropenbookqa_no_fact_nno_cf_p1",
+      "noropenbookqa_no_fact_nno_cf_p2",
+      "noropenbookqa_no_fact_nno_cf_p3",
+      "noropenbookqa_no_fact_nno_cf_p4",
+      "noropenbookqa_no_fact_nno_hybrid_p0",
+      "noropenbookqa_no_fact_nno_hybrid_p1",
+      "noropenbookqa_no_fact_nno_hybrid_p2",
+      "noropenbookqa_no_fact_nno_hybrid_p3",
+      "noropenbookqa_no_fact_nno_hybrid_p4",
+      "noropenbookqa_no_fact_nno_mcf_p0",
+      "noropenbookqa_no_fact_nno_mcf_p1",
+      "noropenbookqa_no_fact_nno_mcf_p2",
+      "noropenbookqa_no_fact_nno_mcf_p3",
+      "noropenbookqa_no_fact_nno_mcf_p4"
+    ]
+  },
+  "noropenbookqa_no_fact_nob": {
+    "category": "world_knowledge_and_reasoning",
+    "language": [
+      "nob"
+    ],
+    "primary_metric": "acc",
+    "random_baseline": 0.25,
+    "max_score": 1.0,
+    "version": 1.2,
+    "variants": [
+      "noropenbookqa_no_fact_nob_cf_p0",
+      "noropenbookqa_no_fact_nob_cf_p1",
+      "noropenbookqa_no_fact_nob_cf_p2",
+      "noropenbookqa_no_fact_nob_cf_p3",
+      "noropenbookqa_no_fact_nob_cf_p4",
+      "noropenbookqa_no_fact_nob_hybrid_p0",
+      "noropenbookqa_no_fact_nob_hybrid_p1",
+      "noropenbookqa_no_fact_nob_hybrid_p2",
+      "noropenbookqa_no_fact_nob_hybrid_p3",
+      "noropenbookqa_no_fact_nob_hybrid_p4",
+      "noropenbookqa_no_fact_nob_mcf_p0",
+      "noropenbookqa_no_fact_nob_mcf_p1",
+      "noropenbookqa_no_fact_nob_mcf_p2",
+      "noropenbookqa_no_fact_nob_mcf_p3",
+      "noropenbookqa_no_fact_nob_mcf_p4"
+    ]
+  },
+  "noropenbookqa_nob": {
+    "category": "language_understanding",
+    "language": [
+      "nob"
+    ],
+    "primary_metric": "acc",
+    "random_baseline": 0.25,
+    "max_score": 1.0,
+    "version": 1.2,
+    "variants": [
+      "noropenbookqa_nob_cf_p0",
+      "noropenbookqa_nob_cf_p1",
+      "noropenbookqa_nob_cf_p2",
+      "noropenbookqa_nob_cf_p3",
+      "noropenbookqa_nob_cf_p4",
+      "noropenbookqa_nob_hybrid_p0",
+      "noropenbookqa_nob_hybrid_p1",
+      "noropenbookqa_nob_hybrid_p2",
+      "noropenbookqa_nob_hybrid_p3",
+      "noropenbookqa_nob_hybrid_p4",
+      "noropenbookqa_nob_mcf_p0",
+      "noropenbookqa_nob_mcf_p1",
+      "noropenbookqa_nob_mcf_p2",
+      "noropenbookqa_nob_mcf_p3",
+      "noropenbookqa_nob_mcf_p4"
+    ]
+  },
+  "norquad_nob": {
+    "category": "language_understanding",
+    "language": [
+      "nob"
+    ],
+    "primary_metric": "f1",
+    "random_baseline": 0.0,
+    "max_score": 1.0,
+    "version": 1.2,
+    "variants": [
+      "norquad_nob_p0",
+      "norquad_nob_p1",
+      "norquad_nob_p2",
+      "norquad_nob_p3",
+      "norquad_nob_p4"
+    ]
+  },
+  "norrewrite_instruct_nob": {
+    "category": "generation_and_summarization",
+    "language": [
+      "nob"
+    ],
+    "primary_metric": "bleu",
+    "random_baseline": 0.0,
+    "max_score": 100.0,
+    "version": 1.2,
+    "variants": [
+      "norrewrite_instruct_nob"
+    ]
+  },
+  "norsumm_nno": {
+    "category": "generation_and_summarization",
+    "language": [
+      "nno"
+    ],
+    "primary_metric": "rougeL_max",
+    "random_baseline": 0.0,
+    "max_score": 100.0,
+    "version": 1.2,
+    "variants": [
+      "norsumm_nno_p0",
+      "norsumm_nno_p1",
+      "norsumm_nno_p2",
+      "norsumm_nno_p3",
+      "norsumm_nno_p4",
+      "norsumm_nno_p5"
+    ]
+  },
+  "norsumm_nob": {
+    "category": "generation_and_summarization",
+    "language": [
+      "nob"
+    ],
+    "primary_metric": "rougeL_max",
+    "random_baseline": 0.0,
+    "max_score": 100.0,
+    "version": 1.2,
+    "variants": [
+      "norsumm_nob_p0",
+      "norsumm_nob_p1",
+      "norsumm_nob_p2",
+      "norsumm_nob_p3",
+      "norsumm_nob_p4",
+      "norsumm_nob_p5"
+    ]
+  },
+  "norsummarize_instruct_nob": {
+    "category": "generation_and_summarization",
+    "language": [
+      "nob"
+    ],
+    "primary_metric": "bleu",
+    "random_baseline": 0.0,
+    "max_score": 100.0,
+    "version": 1.2,
+    "variants": [
+      "norsummarize_instruct_nob"
+    ]
+  },
+  "nortruthfulqa_gen_nno": {
+    "category": "world_knowledge_and_reasoning",
+    "language": [
+      "nno"
+    ],
+    "primary_metric": "rougeL_max",
+    "random_baseline": 0.0,
+    "max_score": 100.0,
+    "version": 1.2,
+    "variants": [
+      "nortruthfulqa_gen_nno_p0",
+      "nortruthfulqa_gen_nno_p1",
+      "nortruthfulqa_gen_nno_p2",
+      "nortruthfulqa_gen_nno_p3",
+      "nortruthfulqa_gen_nno_p4"
+    ]
+  },
+  "nortruthfulqa_gen_nob": {
+    "category": "world_knowledge_and_reasoning",
+    "language": [
+      "nob"
+    ],
+    "primary_metric": "rougeL_max",
+    "random_baseline": 0.0,
+    "max_score": 100.0,
+    "version": 1.2,
+    "variants": [
+      "nortruthfulqa_gen_nob_p0",
+      "nortruthfulqa_gen_nob_p1",
+      "nortruthfulqa_gen_nob_p2",
+      "nortruthfulqa_gen_nob_p3",
+      "nortruthfulqa_gen_nob_p4"
+    ]
+  },
+  "nortruthfulqa_mc_nno": {
+    "category": "world_knowledge_and_reasoning",
+    "language": [
+      "nno"
+    ],
+    "primary_metric": "acc",
+    "random_baseline": 0.23311814890762259,
+    "max_score": 1.0,
+    "version": 1.2,
+    "variants": [
+      "nortruthfulqa_mc_nno_cf_p0",
+      "nortruthfulqa_mc_nno_cf_p1",
+      "nortruthfulqa_mc_nno_cf_p2",
+      "nortruthfulqa_mc_nno_cf_p3",
+      "nortruthfulqa_mc_nno_cf_p4",
+      "nortruthfulqa_mc_nno_hybrid_p0",
+      "nortruthfulqa_mc_nno_hybrid_p1",
+      "nortruthfulqa_mc_nno_hybrid_p2",
+      "nortruthfulqa_mc_nno_hybrid_p3",
+      "nortruthfulqa_mc_nno_hybrid_p4",
+      "nortruthfulqa_mc_nno_mcf_p0",
+      "nortruthfulqa_mc_nno_mcf_p1",
+      "nortruthfulqa_mc_nno_mcf_p2",
+      "nortruthfulqa_mc_nno_mcf_p3",
+      "nortruthfulqa_mc_nno_mcf_p4"
+    ]
+  },
+  "nortruthfulqa_mc_nob": {
+    "category": "world_knowledge_and_reasoning",
+    "language": [
+      "nob"
+    ],
+    "primary_metric": "acc",
+    "random_baseline": 0.23170337745132827,
+    "max_score": 1.0,
+    "version": 1.2,
+    "variants": [
+      "nortruthfulqa_mc_nob_cf_p0",
+      "nortruthfulqa_mc_nob_cf_p1",
+      "nortruthfulqa_mc_nob_cf_p2",
+      "nortruthfulqa_mc_nob_cf_p3",
+      "nortruthfulqa_mc_nob_cf_p4",
+      "nortruthfulqa_mc_nob_hybrid_p0",
+      "nortruthfulqa_mc_nob_hybrid_p1",
+      "nortruthfulqa_mc_nob_hybrid_p2",
+      "nortruthfulqa_mc_nob_hybrid_p3",
+      "nortruthfulqa_mc_nob_hybrid_p4",
+      "nortruthfulqa_mc_nob_mcf_p0",
+      "nortruthfulqa_mc_nob_mcf_p1",
+      "nortruthfulqa_mc_nob_mcf_p2",
+      "nortruthfulqa_mc_nob_mcf_p3",
+      "nortruthfulqa_mc_nob_mcf_p4"
+    ]
+  },
+  "nrk_quiz_qa_nno": {
+    "category": "world_knowledge_and_reasoning",
+    "language": [
+      "nno"
+    ],
+    "primary_metric": "acc",
+    "random_baseline": 0.27884711779448623,
+    "max_score": 1.0,
+    "version": 1.2,
+    "variants": [
+      "nrk_quiz_qa_nno_cf_p0",
+      "nrk_quiz_qa_nno_cf_p1",
+      "nrk_quiz_qa_nno_cf_p2",
+      "nrk_quiz_qa_nno_cf_p3",
+      "nrk_quiz_qa_nno_cf_p4",
+      "nrk_quiz_qa_nno_hybrid_p0",
+      "nrk_quiz_qa_nno_hybrid_p1",
+      "nrk_quiz_qa_nno_hybrid_p2",
+      "nrk_quiz_qa_nno_hybrid_p3",
+      "nrk_quiz_qa_nno_hybrid_p4",
+      "nrk_quiz_qa_nno_mcf_p0",
+      "nrk_quiz_qa_nno_mcf_p1",
+      "nrk_quiz_qa_nno_mcf_p2",
+      "nrk_quiz_qa_nno_mcf_p3",
+      "nrk_quiz_qa_nno_mcf_p4"
+    ]
+  },
+  "nrk_quiz_qa_nob": {
+    "category": "world_knowledge_and_reasoning",
+    "language": [
+      "nob"
+    ],
+    "primary_metric": "acc",
+    "random_baseline": 0.2836296296296296,
+    "max_score": 1.0,
+    "version": 1.2,
+    "variants": [
+      "nrk_quiz_qa_nob_cf_p0",
+      "nrk_quiz_qa_nob_cf_p1",
+      "nrk_quiz_qa_nob_cf_p2",
+      "nrk_quiz_qa_nob_cf_p3",
+      "nrk_quiz_qa_nob_cf_p4",
+      "nrk_quiz_qa_nob_hybrid_p0",
+      "nrk_quiz_qa_nob_hybrid_p1",
+      "nrk_quiz_qa_nob_hybrid_p2",
+      "nrk_quiz_qa_nob_hybrid_p3",
+      "nrk_quiz_qa_nob_hybrid_p4",
+      "nrk_quiz_qa_nob_mcf_p0",
+      "nrk_quiz_qa_nob_mcf_p1",
+      "nrk_quiz_qa_nob_mcf_p2",
+      "nrk_quiz_qa_nob_mcf_p3",
+      "nrk_quiz_qa_nob_mcf_p4"
+    ]
+  },
+  "slide_nob_nno_swe_dan": {
+    "category": "linguistic_knowledge",
+    "language": [
+      "nob",
+      "nno",
+      "swe",
+      "dan"
+    ],
+    "primary_metric": "acc",
+    "random_baseline": 0.21289208633093526,
+    "max_score": 1.0,
+    "version": 1.2,
+    "variants": [
+      "slide_nob_nno_swe_dan_cf_p0",
+      "slide_nob_nno_swe_dan_cf_p1",
+      "slide_nob_nno_swe_dan_cf_p2",
+      "slide_nob_nno_swe_dan_cf_p3",
+      "slide_nob_nno_swe_dan_cf_p4",
+      "slide_nob_nno_swe_dan_hybrid_p0",
+      "slide_nob_nno_swe_dan_hybrid_p1",
+      "slide_nob_nno_swe_dan_hybrid_p2",
+      "slide_nob_nno_swe_dan_hybrid_p3",
+      "slide_nob_nno_swe_dan_hybrid_p4",
+      "slide_nob_nno_swe_dan_mcf_p0",
+      "slide_nob_nno_swe_dan_mcf_p1",
+      "slide_nob_nno_swe_dan_mcf_p2",
+      "slide_nob_nno_swe_dan_mcf_p3",
+      "slide_nob_nno_swe_dan_mcf_p4"
+    ]
+  },
+  "translation_eng_nno": {
+    "category": "machine_translation",
+    "language": [
+      "nno",
+      "eng"
+    ],
+    "primary_metric": "bleu",
+    "random_baseline": 0.0,
+    "max_score": 100.0,
+    "version": 1.2,
+    "variants": [
+      "translation_eng_nno_p0",
+      "translation_eng_nno_p1",
+      "translation_eng_nno_p2",
+      "translation_eng_nno_p3"
+    ]
+  },
+  "translation_eng_nob": {
+    "category": "machine_translation",
+    "language": [
+      "nob",
+      "eng"
+    ],
+    "primary_metric": "bleu",
+    "random_baseline": 0.0,
+    "max_score": 100.0,
+    "version": 1.2,
+    "variants": [
+      "translation_eng_nob_p0",
+      "translation_eng_nob_p1",
+      "translation_eng_nob_p2",
+      "translation_eng_nob_p3"
+    ]
+  },
+  "translation_nno_eng": {
+    "category": "machine_translation",
+    "language": [
+      "nno",
+      "eng"
+    ],
+    "primary_metric": "bleu",
+    "random_baseline": 0.0,
+    "max_score": 100.0,
+    "version": 1.2,
+    "variants": [
+      "translation_nno_eng_p0",
+      "translation_nno_eng_p1",
+      "translation_nno_eng_p2",
+      "translation_nno_eng_p3"
+    ]
+  },
+  "translation_nno_nob": {
+    "category": "machine_translation",
+    "language": [
+      "nob",
+      "nno"
+    ],
+    "primary_metric": "bleu",
+    "random_baseline": 0.0,
+    "max_score": 100.0,
+    "version": 1.2,
+    "variants": [
+      "translation_nno_nob_p0",
+      "translation_nno_nob_p1",
+      "translation_nno_nob_p2",
+      "translation_nno_nob_p3"
+    ]
+  },
+  "translation_nob_eng": {
+    "category": "machine_translation",
+    "language": [
+      "nob",
+      "eng"
+    ],
+    "primary_metric": "bleu",
+    "random_baseline": 0.0,
+    "max_score": 100.0,
+    "version": 1.2,
+    "variants": [
+      "translation_nob_eng_p0",
+      "translation_nob_eng_p1",
+      "translation_nob_eng_p2",
+      "translation_nob_eng_p3"
+    ]
+  },
+  "translation_nob_nno": {
+    "category": "machine_translation",
+    "language": [
+      "nob",
+      "nno"
+    ],
+    "primary_metric": "bleu",
+    "random_baseline": 0.0,
+    "max_score": 100.0,
+    "version": 1.2,
+    "variants": [
+      "translation_nob_nno_p0",
+      "translation_nob_nno_p1",
+      "translation_nob_nno_p2",
+      "translation_nob_nno_p3"
+    ]
+  },
+  "translation_nob_sme": {
+    "category": "machine_translation",
+    "language": [
+      "nob",
+      "sme"
+    ],
+    "primary_metric": "bleu",
+    "random_baseline": 0.0,
+    "max_score": 100.0,
+    "version": 1.2,
+    "variants": [
+      "translation_nob_sme_p0",
+      "translation_nob_sme_p1",
+      "translation_nob_sme_p2",
+      "translation_nob_sme_p3",
+      "translation_nob_sme_p4"
+    ]
+  },
+  "translation_sme_nob": {
+    "category": "machine_translation",
+    "language": [
+      "nob",
+      "sme"
+    ],
+    "primary_metric": "bleu",
+    "random_baseline": 0.0,
+    "max_score": 100.0,
+    "version": 1.2,
+    "variants": [
+      "translation_sme_nob_p0",
+      "translation_sme_nob_p1",
+      "translation_sme_nob_p2",
+      "translation_sme_nob_p3",
+      "translation_sme_nob_p4"
+    ]
+  }
+}

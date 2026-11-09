@@ -1,4 +1,4 @@
-group: nob_orthography
+group: nob_punctuation
 task:
   - ncb_nob
 aggregate_metric_list:

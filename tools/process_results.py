@@ -19,7 +19,7 @@ mapping = {
     "nob_world_cf": "acc,none",
     "nob_world_hybrid": "acc,none",
     "nob_world_mcf": "acc,none",
-    "nob_orthography": "acc,none",
+    "nob_punctuation": "acc,none",
 }
 
 if __name__ == "__main__":

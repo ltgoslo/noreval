@@ -73,7 +73,8 @@ def _bootstrap_stderr(items, metric, direct_score):
     Uses sacrebleu's per-sentence statistics, verified against the directly
     computed score, so each replicate is a cheap re-aggregation: for every
     repetition the sampled documents' rows are re-aggregated into a corpus
-    score, and the K corpus scores are averaged."""
+    score, and the K corpus scores are averaged.
+    """
     try:
         rows_by_rep = []
         for corpus in _repetitions(items):
@@ -81,7 +82,7 @@ def _bootstrap_stderr(items, metric, direct_score):
                 [prediction for _, (_, prediction) in corpus],
                 [[reference for _, (reference, _) in corpus]],
             )
-            rows_by_rep.append(dict(zip((i for i, _ in corpus), rows)))
+            rows_by_rep.append(dict(zip((i for i, _ in corpus), rows, strict=True)))
 
         reproduced = statistics.fmean(
             metric._aggregate_and_compute(list(rows.values())).score
@@ -102,7 +103,7 @@ def _bootstrap_stderr(items, metric, direct_score):
                     scores.append(metric._aggregate_and_compute(sampled_rows).score)
             replicates.append(statistics.fmean(scores))
         return statistics.stdev(replicates)
-    except Exception as exc:
+    except Exception as exc:  # noqa: BLE001
         logger.error("bootstrap stderr failed (%s): %s", type(metric).__name__, exc)
         return float("nan")
 
@@ -113,7 +114,7 @@ def multi_f1(items):
     zero_division=0 makes degenerate bootstrap replicates (all predictions in
     one class) silent; sklearn's default computes the same value but warns.
     """
-    preds, golds = zip(*items)
+    preds, golds = zip(*items, strict=True)
     return sklearn.metrics.f1_score(
         np.array(golds), np.array(preds), average="macro", zero_division=0
     )
@@ -122,7 +123,8 @@ def multi_f1(items):
 def multi_f1_stderr(items):
     """Bootstrap standard error of the macro-F1: the (prediction, gold) pairs
     are resampled with replacement and `multi_f1` is recomputed on each
-    replicate."""
+    replicate.
+    """
     rng = random.Random(BOOTSTRAP_SEED)
     pairs = list(items)
     n = len(pairs)

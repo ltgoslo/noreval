@@ -1,15 +1,13 @@
-import datasets
 import numpy as np
 from evaluate import load
 
 
 try:
-    import bert_score
     import sacrebleu
     from rouge_score import rouge_scorer, scoring
 except ModuleNotFoundError as e:
     raise type(e)(
-        "`sacrebleu`, `bert_score`, and `rouge_score` are required for evaluating the model on NorEval."
+        "`sacrebleu` and `rouge_score` are required for evaluating the model on NorEval."
     ) from e
 
 
@@ -26,10 +24,11 @@ def clean_summary_text(text):
 
 def clean_summaries(dataset):
     """Clean newlines from all summaries in the dataset."""
+
     def clean_doc(doc):
         doc["summaries"] = [clean_summary_text(s) for s in doc["summaries"]]
         return doc
-    
+
     return dataset.map(clean_doc)
 
 
@@ -122,7 +121,7 @@ def rouge(refs, preds):
 
     # Accumulate confidence intervals.
     aggregator = scoring.BootstrapAggregator()
-    for ref, pred in zip(refs, preds):
+    for ref, pred in zip(refs, preds, strict=False):
         ref = _prepare_summary(ref)
         pred = _prepare_summary(pred)
         aggregator.add_scores(scorer.score(ref, pred))
@@ -132,16 +131,24 @@ def rouge(refs, preds):
 
 def bertscore_f1(references, predictions):
     """Computes the F1 score of the BERTScore metric.
+
     Args:
         references: A list of reference strings.
         predictions: A list of predicted strings.
         **kwargs: Additional keyword arguments.
+
     Returns:
         The F1 score of the BERTScore metric.
     """
     global BERTSCORE
     if BERTSCORE is None:
         # init BERTScore once
+        try:
+            import bert_score  # noqa: F401
+        except ModuleNotFoundError as e:
+            raise type(e)(
+                "`bert_score` is required for evaluating the model on NorSumm."
+            ) from e
         BERTSCORE = load("bertscore")
     bertscore = BERTSCORE
     return bertscore.compute(

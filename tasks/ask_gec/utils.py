@@ -1,4 +1,4 @@
-"""ERRANT scoring for `ask_gec_nob`, run inside lm-evaluation-harness.
+r"""ERRANT scoring for `ask_gec_nob`, run inside lm-evaluation-harness.
 
 ERRANT is corpus-level: the pooled source/target and source/prediction pairs
 are aligned into M2 files and compared in a single pass, cached on the item
@@ -60,7 +60,7 @@ def errant_agg(items):
     """
     try:
         return _errant_corpus(items)[0]
-    except Exception as exc:
+    except Exception as exc:  # noqa: BLE001
         logger.error("ERRANT evaluation failed for ask_gec_nob: %s", exc)
         return float("nan")
 
@@ -68,7 +68,8 @@ def errant_agg(items):
 def errant_f05_stderr(items):
     """Bootstrap standard error of the corpus F0.5: documents are resampled
     with replacement and each replicate is recomputed from the per-sentence
-    TP/FP/FN counts."""
+    TP/FP/FN counts.
+    """
     try:
         _, doc_counts = _errant_corpus(items)
         if doc_counts is None:
@@ -87,7 +88,7 @@ def errant_f05_stderr(items):
                 fn += doc_counts[i][2]
             replicates.append(_f05(tp, fp, fn))
         return statistics.stdev(replicates)
-    except Exception as exc:
+    except Exception as exc:  # noqa: BLE001
         logger.error("ERRANT stderr bootstrap failed for ask_gec_nob: %s", exc)
         return float("nan")
 
@@ -137,7 +138,7 @@ def _run_errant(items):
     # every source sentence appears once per sampled correction
     doc_sizes = [len(doc_triples) for doc_triples in items]
     flat = [triple for doc_triples in items for triple in doc_triples]
-    sources, targets, predictions = (list(field) for field in zip(*flat))
+    sources, targets, predictions = (list(field) for field in zip(*flat, strict=True))
     _check_no_newlines(predictions)
 
     parallel = _command("errant_parallel")
@@ -160,9 +161,12 @@ def _run_errant(items):
             _run(
                 parallel
                 + [
-                    "-orig", paths["sources"],
-                    "-cor", paths[name],
-                    "-out", m2[name],
+                    "-orig",
+                    paths["sources"],
+                    "-cor",
+                    paths[name],
+                    "-out",
+                    m2[name],
                     "-lev",
                     "-tok",
                 ],
@@ -183,8 +187,11 @@ def _run_errant(items):
 
     # per-sentence counts, grouped back into per-document sums for the bootstrap
     counts = [
-        (sum((hyp & ref).values()), sum((hyp - ref).values()),
-         sum((ref - hyp).values()))
+        (
+            sum((hyp & ref).values()),
+            sum((hyp - ref).values()),
+            sum((ref - hyp).values()),
+        )
         for hyp, ref in zip(hyp_edits, ref_edits, strict=True)
     ]
     doc_counts, offset = [], 0
@@ -211,7 +218,8 @@ def _run_errant(items):
 def _check_no_newlines(predictions):
     """ERRANT's M2 format is line-aligned, so an embedded newline shifts every
     subsequent sentence against its source. `generation_kwargs.until` should
-    prevent this; fail loudly rather than report a silently misaligned score."""
+    prevent this; fail loudly rather than report a silently misaligned score.
+    """
     offenders = [i for i, pred in enumerate(predictions) if "\n" in pred]
     if offenders:
         raise ValueError(
@@ -264,10 +272,10 @@ def _check_spacy_model():
 
 
 def _write_lines(tmp_dir, name, lines):
-    """Terminate every line, rather than joining with newlines.
+    r"""Terminate every line, rather than joining with newlines.
 
     ERRANT reads the parallel files with `zip` over file handles. Iterating a
-    file yields nothing for a trailing empty line, so `"\\n".join(...)` loses
+    file yields nothing for a trailing empty line, so `"\n".join(...)` loses
     the last sentence whenever it is empty -- the prediction M2 then has one
     fewer sentence than the reference M2 and `errant_compare` asserts.
     Terminating every line makes iteration yield exactly len(lines) entries for
@@ -281,9 +289,12 @@ def _write_lines(tmp_dir, name, lines):
 
 def _run(cmd, name):
     """Force UTF-8 in the child so ERRANT can read Norwegian text on nodes
-    where the locale would otherwise select ASCII."""
+    where the locale would otherwise select ASCII.
+    """
     env = {**os.environ, "PYTHONUTF8": "1"}
-    proc = subprocess.run(cmd, capture_output=True, text=True, env=env)
+    proc = subprocess.run(  # noqa: S603
+        cmd, capture_output=True, text=True, env=env, check=False
+    )
     if proc.returncode != 0:
         raise RuntimeError(f"`{name}` exited {proc.returncode}: {proc.stderr.strip()}")
     return proc.stdout

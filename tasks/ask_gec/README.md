@@ -47,14 +47,11 @@ pass `--predict_only` above, then:
 python3 ask_gec/errant.py --fpath results/ask_gec_nob/0-shot/AI-Sweden-Models__Llama-3-8B/samples_ask_gec_nob_p0_2025-01-28T01-08-13.454441.jsonl --out_fdir results/ask_gec_nob/0-shot/AI-Sweden-Models__Llama-3-8B/
 ```
 
-The results are saved as `..._errant.json`.
+The results are saved next to the samples file, as `<samples file>_errant.json`.
 
-Note: utils.py` and this `errant.py` normalise predictions identically
-(`.replace("\n\n", "\n")`), so an empty prediction is a blank
-line in both and is scored as deleting the sentence.
-
-They differ in one respect. ERRANT reads the parallel files with `zip` over
-file handles, which never yields a trailing empty line, so `errant.py` loses
-the last sentence whenever the final prediction is empty and `errant_compare`
-then fails on `assert len(hyp_m2) == len(ref_m2)`. `utils.py` terminates every
-line instead of joining with newlines, so it scores those files correctly.
+Note: `errant.py` scores only the first sampled correction of each sentence,
+while `errant_f05` pools all sampled corrections (`repeats: 3`), so the two
+scores are not directly comparable. Both normalise predictions identically
+(`.replace("\n\n", "\n")`), so an empty prediction is a blank line and is
+scored as deleting the sentence, and both end every line with a newline, so an
+empty final prediction is kept rather than dropped.

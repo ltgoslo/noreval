@@ -39,5 +39,5 @@ def p4(doc):
     title = doc["title"]
     passage = doc["passage"]
     question = doc["question"]
-    prompt = f'Tittel: {title}\n\nTekst:{passage}\n\nGitt teksten over, besvar følgende spørsmål: "{question}"\n\nSvar:'
+    prompt = f'Tittel: {title}\n\nTekst: {passage}\n\nGitt teksten over, besvar følgende spørsmål: "{question}"\n\nSvar:'
     return prompt

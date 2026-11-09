@@ -47,26 +47,26 @@ The task names end with the language code: `nob` (Bokmål), `nno` (Nynorsk), `sm
 | [NCB](https://huggingface.co/datasets/hcfa/ncb) | `ncb_nob` | Multiple choice |
 | [NoCoLA](https://huggingface.co/datasets/ltg/nocola) | `nocola_nob` | Multiple choice |
 | [SLIDE](https://huggingface.co/datasets/ltg/slide) | `slide_nob_nno_swe_dan` | Multiple choice |
-| [MultiBLiMP](https://huggingface.co/datasets/jumelet/multiblimp) | `multiblimp_ltg_sme` | Multiple choice |
+| [MultiBLiMP](https://huggingface.co/datasets/jumelet/multiblimp) | `multiblimp_noreval_sme` | Multiple choice |
 | [NorIdiom](https://huggingface.co/datasets/Sprakbanken/Norwegian_idioms) | `noridiom_nob`, `noridiom_nno` | Generation |
 | [ASK-GEC](https://huggingface.co/datasets/ltg/ask-gec) | `ask_gec_nob` | Generation |
 | **Language understanding** | | |
 | [NoReC Sentence](https://huggingface.co/datasets/ltg/norec_sentence) | `norec_sentence_nob` | Multiple choice |
 | [NoReC Document](https://huggingface.co/datasets/ltg/norec_document) | `norec_document_nob` | Multiple choice |
-| [NorBelebele](https://huggingface.co/datasets/ltg/norbelebele) | `norbelebele_nob` | Multiple choice |
 | [NorOpenBookQA](https://huggingface.co/datasets/ltg/noropenbookqa) | `noropenbookqa_nob`, `noropenbookqa_nno` | Multiple choice |
+| [NorBelebele](https://huggingface.co/datasets/ltg/norbelebele) | `norbelebele_nob` | Multiple choice |
 | [NorQuAD](https://huggingface.co/datasets/ltg/norquad) | `norquad_nob` | Generation |
-| **World knowledge and reasoning** | | |
+| **World knowledge & reasoning** | | |
 | [NRK-Quiz-QA](https://huggingface.co/datasets/ltg/nrk_quiz_qa) | `nrk_quiz_qa_nob`, `nrk_quiz_qa_nno` | Multiple choice |
 | [NorOpenBookQA (without facts)](https://huggingface.co/datasets/ltg/noropenbookqa) | `noropenbookqa_no_fact_nob`, `noropenbookqa_no_fact_nno` | Multiple choice |
 | [NorCommonsenseQA](https://huggingface.co/datasets/ltg/norcommonsenseqa) | `norcommonsenseqa_nob`, `norcommonsenseqa_nno` | Multiple choice |
 | [NorTruthfulQA](https://huggingface.co/datasets/ltg/nortruthfulqa_mc) | `nortruthfulqa_mc_nob`, `nortruthfulqa_mc_nno` | Multiple choice |
 | [NorTruthfulQA](https://huggingface.co/datasets/ltg/nortruthfulqa_gen) | `nortruthfulqa_gen_nob`, `nortruthfulqa_gen_nno` | Generation |
-| **Generation and summarization** | | |
+| **Generation & summarization** | | |
 | [NorSumm](https://huggingface.co/datasets/SamiaT/NorSumm) | `norsumm_nob`, `norsumm_nno` | Generation |
 | [NorRewrite-Instruct](https://huggingface.co/datasets/ltg/norrewrite-instruct) | `norrewrite_instruct_nob` | Generation |
 | [NorSummarize-Instruct](https://huggingface.co/datasets/ltg/norsummarize-instruct) | `norsummarize_instruct_nob` | Generation |
-| **Machine translation** | | |
+| **Translation** | | |
 | [NorSumm Translation](https://huggingface.co/datasets/ltg/norsumm-nob-nno-translation) | `translation_nob_nno`, `translation_nno_nob` | Generation |
 | [Tatoeba](https://huggingface.co/datasets/Helsinki-NLP/tatoeba_mt) | `translation_eng_nob`, `translation_nob_eng`, `translation_eng_nno`, `translation_nno_eng` | Generation |
 | [Sámi Tatoeba](https://huggingface.co/datasets/ltg/saami-tatoeba) | `translation_nob_sme`, `translation_sme_nob` | Generation |
@@ -103,6 +103,7 @@ lm_eval \
 
 * [`guidelines/`](./guidelines/): the annotation guidelines for the human baselines, prompt writing, and the creation of NorRewrite-Instruct and NorSummarize-Instruct.
 * [`tools/`](./tools/): example task groups for aggregating results by category and a script for processing and plotting the results.
+* [`noreval_metadata.json`](./noreval_metadata.json): the category, language(s), primary metric, random baseline and maximum score of each task, with the names of its variants (e.g., for min-max normalization and grouping). It is generated from the task configs with [`tools/build_metadata.py`](./tools/build_metadata.py).
 
 
 ### 📝 Citation

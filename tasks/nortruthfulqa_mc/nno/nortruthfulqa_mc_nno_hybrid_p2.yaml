@@ -4,4 +4,3 @@ tag:
 task: nortruthfulqa_mc_nno_hybrid_p2
 include: _nortruthfulqa_mc_nno_yaml
 doc_to_text: !function utils.hybrid_p2_nn
-target_delimiter: "\n"
