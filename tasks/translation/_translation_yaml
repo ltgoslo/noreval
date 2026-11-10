@@ -26,4 +26,4 @@ generation_kwargs:
   top_k: 0
   max_new_tokens: 256
 metadata:
-  version: 1.2
+  version: 1.3

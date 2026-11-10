@@ -3,6 +3,7 @@
 NorEval is a multi-task Norwegian language understanding and generation evaluation benchmark. 
 
 ### 🔥 Updates
+* **`10.11.2026`**: 🧩 We release [NorEval v1.2](https://github.com/ltgoslo/noreval/releases/tag/v1.2), which evaluates every multiple-choice task in three formulations (cloze, hybrid and multiple choice), adds new metrics and samples the generation tasks.
 * **`03.11.2026`**: 📌 We release [NorEval v1.1.1](https://github.com/ltgoslo/noreval/releases/tag/v1.1.1), which pins every dataset to a fixed version for reproducible evaluation and fixes the Tatoeba English ↔ Bokmål/Nynorsk tasks.
 * **`17.10.2026`**: 🆕 We release [NorEval v1.1](https://github.com/ltgoslo/noreval/releases/tag/v1.1) with new tasks (SLIDE, NoCoLA, MultiBLiMP, NorOpenBookQA without facts, Bokmål ↔ Nynorsk and Bokmål ↔ Northern Sámi translation) and updated task configs.
 * **`15.10.2026`**: 📊 Our interactive dashboard is available [here](https://ltgoslo.github.io/llm-dashboard/noreval/).

@@ -50,4 +50,4 @@ metric_list:
     aggregation: !function utils.multi_f1_stderr
     higher_is_better: false
 metadata:
-  version: 1.2
+  version: 1.3
