@@ -6,5 +6,5 @@ task:
   - nortruthfulqa_mc_nob_mcf
   - norcommonsenseqa_nob_mcf
 aggregate_metric_list:
-  - metric: acc
+  - metric: acc_norm
     weight_by_size: True

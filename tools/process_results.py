@@ -16,9 +16,9 @@ mapping = {
     "nob_mt": "bleu,none",
     "nob_language": "fscore,none",
     "nob_generation": "rougeL_max,none",
-    "nob_world_cf": "acc,none",
-    "nob_world_hybrid": "acc,none",
-    "nob_world_mcf": "acc,none",
+    "nob_world_cf": "acc_norm,none",
+    "nob_world_hybrid": "acc_norm,none",
+    "nob_world_mcf": "acc_norm,none",
     "nob_punctuation": "acc,none",
 }
 

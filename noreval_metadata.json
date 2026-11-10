@@ -71,7 +71,7 @@
     "language": [
       "nob"
     ],
-    "primary_metric": "acc",
+    "primary_metric": "acc_norm",
     "random_baseline": 0.25,
     "max_score": 1.0,
     "version": 1.3,
@@ -98,7 +98,7 @@
     "language": [
       "nno"
     ],
-    "primary_metric": "acc",
+    "primary_metric": "acc_norm",
     "random_baseline": 0.2,
     "max_score": 1.0,
     "version": 1.3,
@@ -125,7 +125,7 @@
     "language": [
       "nob"
     ],
-    "primary_metric": "acc",
+    "primary_metric": "acc_norm",
     "random_baseline": 0.2,
     "max_score": 1.0,
     "version": 1.3,
@@ -240,7 +240,7 @@
     "language": [
       "nno"
     ],
-    "primary_metric": "acc",
+    "primary_metric": "acc_norm",
     "random_baseline": 0.25,
     "max_score": 1.0,
     "version": 1.3,
@@ -267,7 +267,7 @@
     "language": [
       "nno"
     ],
-    "primary_metric": "acc",
+    "primary_metric": "acc_norm",
     "random_baseline": 0.25,
     "max_score": 1.0,
     "version": 1.3,
@@ -294,7 +294,7 @@
     "language": [
       "nob"
     ],
-    "primary_metric": "acc",
+    "primary_metric": "acc_norm",
     "random_baseline": 0.25,
     "max_score": 1.0,
     "version": 1.3,
@@ -321,7 +321,7 @@
     "language": [
       "nob"
     ],
-    "primary_metric": "acc",
+    "primary_metric": "acc_norm",
     "random_baseline": 0.25,
     "max_score": 1.0,
     "version": 1.3,
@@ -461,7 +461,7 @@
     "language": [
       "nno"
     ],
-    "primary_metric": "acc",
+    "primary_metric": "acc_norm",
     "random_baseline": 0.23311814890762259,
     "max_score": 1.0,
     "version": 1.3,
@@ -488,7 +488,7 @@
     "language": [
       "nob"
     ],
-    "primary_metric": "acc",
+    "primary_metric": "acc_norm",
     "random_baseline": 0.23170337745132827,
     "max_score": 1.0,
     "version": 1.3,
@@ -515,7 +515,7 @@
     "language": [
       "nno"
     ],
-    "primary_metric": "acc",
+    "primary_metric": "acc_norm",
     "random_baseline": 0.27547095761381474,
     "max_score": 1.0,
     "version": 1.3,
@@ -542,7 +542,7 @@
     "language": [
       "nob"
     ],
-    "primary_metric": "acc",
+    "primary_metric": "acc_norm",
     "random_baseline": 0.2834613196814562,
     "max_score": 1.0,
     "version": 1.3,
@@ -572,7 +572,7 @@
       "swe",
       "dan"
     ],
-    "primary_metric": "acc",
+    "primary_metric": "acc_norm",
     "random_baseline": 0.21289208633093526,
     "max_score": 1.0,
     "version": 1.3,
