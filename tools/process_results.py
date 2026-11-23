@@ -26,8 +26,13 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
     arg = parser.add_argument
-    arg("--results", "-r", help="Path to the NorEval results directory "
-                                "(should contain subdirectories corresponding to task groups)", required=True)
+    arg(
+        "--results",
+        "-r",
+        help="Path to the NorEval results directory "
+        "(should contain subdirectories corresponding to task groups)",
+        required=True,
+    )
     arg(
         "--benchmark",
         "-b",
@@ -70,7 +75,7 @@ if __name__ == "__main__":
                 if res == benchmark:
                     metrics = mapping[res]
                     logger.info(
-                        f"{model}: {results[model][benchmark]["results"][res][metrics]}"
+                        f"{model}: {results[model][benchmark]['results'][res][metrics]}"
                     )
                     scoreboard[model].append(
                         results[model][benchmark]["results"][res][metrics]
@@ -83,9 +88,9 @@ if __name__ == "__main__":
 
     fig, ax = plt.subplots(layout="constrained")
 
-    plt.rcParams['font.size'] = 6
-    ax.tick_params(axis='both', which='major', labelsize=6)
-    ax.tick_params(axis='both', which='minor', labelsize=4)
+    plt.rcParams["font.size"] = 6
+    ax.tick_params(axis="both", which="major", labelsize=6)
+    ax.tick_params(axis="both", which="minor", labelsize=4)
 
     for attribute, measurement in scoreboard.items():
         offset = width * multiplier
@@ -99,7 +104,7 @@ if __name__ == "__main__":
     ax.set_title(f"NorEval performance in {args.shots}-shot setup")
     ax.set_xticks(
         x + 0.5 * width,
-        [f"{el} ({mapping[el].split(",")[0]})" for el in benchmark_labels],
+        [f"{el} ({mapping[el].split(',')[0]})" for el in benchmark_labels],
     )
     ax.legend(loc="best", ncols=3)
 

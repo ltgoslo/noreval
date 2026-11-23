@@ -30,5 +30,7 @@ def _add_f1_pairs(metrics, predictions, doc):
 
 
 process_results = make_process_results(choices_negativ_positiv, gold, _add_f1_pairs)
-process_results_darlig_bra = make_process_results(choices_darlig_bra, gold, _add_f1_pairs)
+process_results_darlig_bra = make_process_results(
+    choices_darlig_bra, gold, _add_f1_pairs
+)
 process_results_mcf = make_process_results(choices_letters, gold, _add_f1_pairs)

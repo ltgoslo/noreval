@@ -13,7 +13,7 @@ def get_first_word(text):
 
 def normalize(text):
     exclude = set(punctuation)
-    text = text.split('\n')[0]  # use only the first line for backwards compatibility
+    text = text.split("\n")[0]  # use only the first line for backwards compatibility
     return "".join(ch for ch in text if ch not in exclude).lower().strip()
 
 
@@ -53,4 +53,3 @@ def process_results(doc, results):
     # results[0] holds the K sampled generations; average their scores
     scored = [_score_one(doc, completion) for completion in results[0]]
     return {key: sum(s[key] for s in scored) / len(scored) for key in scored[0]}
-

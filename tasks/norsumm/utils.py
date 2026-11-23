@@ -26,10 +26,11 @@ def clean_summary_text(text):
 
 def clean_summaries(dataset):
     """Clean newlines from all summaries in the dataset."""
+
     def clean_doc(doc):
         doc["summaries"] = [clean_summary_text(s) for s in doc["summaries"]]
         return doc
-    
+
     return dataset.map(clean_doc)
 
 

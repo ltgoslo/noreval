@@ -18,5 +18,5 @@ def gold(doc):
     return [["1", "2", "3", "4"].index(doc["correct_answer_num"])]
 
 
-process_results = make_process_results(choices_text, gold)      # cf / hybrid
+process_results = make_process_results(choices_text, gold)  # cf / hybrid
 process_results_mcf = make_process_results(choices_letters, gold)

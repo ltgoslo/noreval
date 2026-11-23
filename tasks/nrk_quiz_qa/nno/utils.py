@@ -56,14 +56,18 @@ def cf_p1_nn(doc):
 
 
 def hybrid_p1_nn(doc):
-    return "{question}\n\nSvaralternativer:{choices}\n\nKva er rett svar?\n\nSvar:".format(
-        question=doc["question"], choices=_unlabeled_choices(doc)
+    return (
+        "{question}\n\nSvaralternativer:{choices}\n\nKva er rett svar?\n\nSvar:".format(
+            question=doc["question"], choices=_unlabeled_choices(doc)
+        )
     )
 
 
 def mcf_p1_nn(doc):
-    return "{question}\n\nSvaralternativer:{choices}\n\nKva er rett svar?\n\nSvar:".format(
-        question=doc["question"], choices=_labeled_choices(doc)
+    return (
+        "{question}\n\nSvaralternativer:{choices}\n\nKva er rett svar?\n\nSvar:".format(
+            question=doc["question"], choices=_labeled_choices(doc)
+        )
     )
 
 
@@ -113,14 +117,18 @@ def cf_p4_nn(doc):
 
 
 def hybrid_p4_nn(doc):
-    return "{question}\nVel rett svar blant desse alternativa:{choices}\n\nSvar:".format(
-        question=doc["question"], choices=_unlabeled_choices(doc)
+    return (
+        "{question}\nVel rett svar blant desse alternativa:{choices}\n\nSvar:".format(
+            question=doc["question"], choices=_unlabeled_choices(doc)
+        )
     )
 
 
 def mcf_p4_nn(doc):
-    return "{question}\nVel rett svar blant desse alternativa:{choices}\n\nSvar:".format(
-        question=doc["question"], choices=_labeled_choices(doc)
+    return (
+        "{question}\nVel rett svar blant desse alternativa:{choices}\n\nSvar:".format(
+            question=doc["question"], choices=_labeled_choices(doc)
+        )
     )
 
 
@@ -145,5 +153,5 @@ def gold(doc):
     return [doc["choices"]["label"].index(doc["answer"])]
 
 
-process_results = make_process_results(choices_text, gold)      # cf / hybrid
+process_results = make_process_results(choices_text, gold)  # cf / hybrid
 process_results_mcf = make_process_results(choices_labels, gold)
