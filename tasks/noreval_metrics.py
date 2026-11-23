@@ -21,7 +21,9 @@ variant yields:
 from scipy.special import softmax
 
 
-def make_process_results(choices, gold_indices, postprocess=None, expect_mutual_info=True):
+def make_process_results(
+    choices, gold_indices, postprocess=None, expect_mutual_info=True
+):
     """Build a task's process_results.
 
     choices(doc) returns the answer choices and must be the same function the
@@ -52,7 +54,9 @@ def split_loglikelihoods(results, n_choices, expect_mutual_info):
     expect_mutual_info=True, missing unconditional loglikelihoods raise here
     rather than as a missing-metric error at aggregation time.
     """
-    lls = [result[0] if isinstance(result, (tuple, list)) else result for result in results]
+    lls = [
+        result[0] if isinstance(result, (tuple, list)) else result for result in results
+    ]
     if len(lls) == 2 * n_choices:
         return lls[:n_choices], lls[n_choices:]
     if len(lls) == n_choices:
@@ -64,7 +68,9 @@ def split_loglikelihoods(results, n_choices, expect_mutual_info):
                 "expect_mutual_info=False)"
             )
         return lls, []
-    raise ValueError(f"Expected {n_choices} or {2 * n_choices} loglikelihoods, got {len(lls)}")
+    raise ValueError(
+        f"Expected {n_choices} or {2 * n_choices} loglikelihoods, got {len(lls)}"
+    )
 
 
 def score_choices(results, choices, gold_indices, expect_mutual_info=True):
@@ -94,5 +100,7 @@ def score_choices(results, choices, gold_indices, expect_mutual_info=True):
         predictions[suffix] = pred
         metrics[f"acc{suffix}"] = int(pred in gold_indices)
         metrics[f"prob_correct{suffix}"] = float(sum(probs[i] for i in gold_indices))
-        metrics[f"loglikelihood_correct{suffix}"] = float(max(lls[i] for i in gold_indices))
+        metrics[f"loglikelihood_correct{suffix}"] = float(
+            max(lls[i] for i in gold_indices)
+        )
     return metrics, predictions

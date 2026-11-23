@@ -149,5 +149,5 @@ def gold(doc):
     return [doc["mc1_targets"]["labels"].index(1)]
 
 
-process_results = make_process_results(choices_text, gold)      # cf / hybrid
+process_results = make_process_results(choices_text, gold)  # cf / hybrid
 process_results_mcf = make_process_results(mcf_labels_nn, gold)

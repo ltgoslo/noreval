@@ -160,9 +160,12 @@ def _run_errant(items):
             _run(
                 parallel
                 + [
-                    "-orig", paths["sources"],
-                    "-cor", paths[name],
-                    "-out", m2[name],
+                    "-orig",
+                    paths["sources"],
+                    "-cor",
+                    paths[name],
+                    "-out",
+                    m2[name],
                     "-lev",
                     "-tok",
                 ],
@@ -183,8 +186,11 @@ def _run_errant(items):
 
     # per-sentence counts, grouped back into per-document sums for the bootstrap
     counts = [
-        (sum((hyp & ref).values()), sum((hyp - ref).values()),
-         sum((ref - hyp).values()))
+        (
+            sum((hyp & ref).values()),
+            sum((hyp - ref).values()),
+            sum((ref - hyp).values()),
+        )
         for hyp, ref in zip(hyp_edits, ref_edits, strict=True)
     ]
     doc_counts, offset = [], 0
